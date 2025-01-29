@@ -1,0 +1,205 @@
+/* General body and text styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Wrapper for uniform styling */
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Logo container styling */
+.logo-container h1 {
+    font-size: 3em;
+    color: #3e06c3; /* Blue color */
+    margin: 0;
+    text-align: center;
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: #3e06c3;
+    padding: 15px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 2em;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #ff4d00;
+}
+
+/* Banner styling */
+.banner {
+    background-image: url('D:/Mexis/Image 1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.banner h1 {
+    font-size: 4em;
+    text-shadow: 2px 2px 5px #000;
+    margin: 0;
+}
+
+/* Product section styling */
+.products {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.products h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2em;
+    padding: 0 10%;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.product img:hover {
+    transform: scale(1.05);
+}
+
+/* About Us Section */
+#about {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #555;
+}
+
+#about h3 {
+    font-size: 2em;
+    margin-top: 30px;
+}
+
+/* Contact Us Section */
+#contact {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#contact p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+#contact a {
+    color: #ff4d00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Our Presence Section */
+#OurPresence {
+    padding: 60px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.india-map {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1em;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

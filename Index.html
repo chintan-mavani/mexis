@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mexis</title>
+    <style>
+     <!-- Force HTTPS Redirect -->
+     <script>
+    if (window.location.protocol !== "https:") {
+        window.location.href = "https://www.mexis.in" + window.location.pathname + window.location.search + window.location.hash;
+    }
+    </script>
+        
+        /* General body and text styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Wrapper for uniform styling */
+        .wrapper {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        /* Logo container styling */
+        .logo-container h1 {
+            font-size: 3em;
+            color: #3e06c3; /* Blue color */
+            margin: 0;
+            text-align: center;
+        }
+
+        /* Navigation bar styling */
+        nav {
+            background-color: #3e06c3;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 2em;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            text-transform: uppercase;
+        }
+
+        nav a:hover {
+            color: #ff4d00;
+        }
+
+        /* Banner styling */
+        .banner {
+            background-image: url('D:/Mexis/Image 1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .banner h1 {
+            font-size: 4em;
+            text-shadow: 2px 2px 5px #000;
+            margin: 0;
+        }
+
+        /* Product section styling */
+        .products {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .products h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2em;
+            padding: 0 10%;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .product img:hover {
+            transform: scale(1.05);
+        }
+
+        /* About Us Section */
+        #about {
+            padding: 60px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        #about p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        #about h3 {
+            font-size: 2em;
+            margin-top: 30px;
+        }
+
+        /* Contact Us Section */
+        #contact {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        #contact p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        #contact a {
+            color: #ff4d00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Our Presence Section */
+        #OurPresence {
+            padding: 60px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .map-container {
+            display: flex;
+            justify-content: center;  /* Centering the map horizontally */
+            align-items: center;  /* Centering the map vertically */
+            margin-top: 20px;
+        }
+
+        .india-map {
+            max-width: 100%;  /* Ensure the map scales appropriately */
+            height: auto;
+            max-height: 500px;  /* Set a maximum height for the map */
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 1em;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo-container">
+            <h1>Mexis</h1> <!-- Company name as logo -->
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+        <a href="#OurPresence">Our Presence</a>
+    </nav>
+
+    <!-- Banner Section -->
+    <div class="banner">
+        <h1>Welcome to Mexis</h1>
+    </div>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="wrapper">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <!-- Glass Soft Close Tandem-->
+                <div class="product">
+                    <img src="D:/Mexis/A343dd41d994747138789cda1de3d93c57.webp" alt="Soft Close Channel">
+                    <h3>Glass Tandem Systems</h3>
+                    <p>Transform your kitchen or living space with our Glass Soft Close Tandem systems, combining elegance with superior functionality. Designed to bring a modern touch to your interiors, these high-quality tandem boxes feature sleek glass panels that allow for a clear, stylish view of your stored items, while offering smooth and effortless closing action.</p>
+                </div>
+
+                <!-- Aluminium Profiles Product -->
+                <div class="product">
+                    <img src="D:/Mexis/glassprofile.jpg" alt="Aluminium Profiles">
+                    <h3>Aluminium Profiles</h3>
+                    <p>Mexis Aluminium profiles are Crafted with precision, our aluminum profiles are resistant to corrosion, ensuring long-lasting functionality even in demanding environments. Available in a variety of shapes and sizes, they can be customized to meet your specific needs, making them an essential component for any construction or design project.</p>
+                </div>
+
+                <!-- Kitchen Tandem Box -->
+                <div class="product">
+                    <img src="D:\Mexis\Tandem (1).jpg" alt="Kitchen Tandem Box">
+                    <h3>Kitchen Tandem Box</h3>
+                    <p>Elevate your kitchen's functionality with our premium Kitchen Tandem Box systems. Designed for seamless integration into your kitchen cabinets, these high-quality storage solutions provide easy access to your kitchen essentials while maximizing space efficiency.</p>
+                </div>
+
+                <!-- Mortise Lock Product -->
+                <div class="product">
+                    <img src="D:/Mexis/Write your topic or idea.png" alt="Mortise Lock">
+                    <h3>Mortise Lock</h3>
+                    <p>Our Mortise Locks offer superior security and durability, ideal for doors in both residential and commercial settings. Designed for easy installation, they provide enhanced protection with a sleek, compact design. Available in various finishes, these locks ensure long-lasting performance and reliability.</p>
+                </div>
+
+                <!-- Telescopic Channel -->
+                <div class="product">
+                    <img src="D:\Mexis\Telescopic Channel.webp" alt="Telescopic Channel">
+                    <h3>Telescopic Channel</h3>
+                    <p>Whether it's for kitchen drawers, wardrobe storage, or office solutions, Mexis Telescopic Channels deliver unmatched performance, style, and reliability. Choose from a range of sizes and finishes tailored to your specific needs and enjoy the seamless blend of functionality and sophistication in your interiors.</p>
+                </div>
+
+                <!-- Sliding Fitting -->
+                <div class="product">
+                    <img src="D:\Mexis\sliding-roller.webp" alt="Sliding Fitting">
+                    <h3>Sliding Fitting</h3>
+                    <p>Mexis sliding door track system designed for industrial-grade performance and durability. Built to handle heavy-duty applications, it combines smooth operation with robust strength for seamless functionality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="wrapper">
+            <h2>About Us</h2>
+            <p>Mexis is a leading manufacturer of innovative hardware solutions, providing premium products like soft close channels, aluminum profiles, and advanced lock systems. Our products are designed to ensure quality, durability, and cutting-edge functionality, offering the best in home and business security, design, and performance.</p>
+            <p>We are proud to work with more than 30 companies across India for private label manufacturing, delivering custom solutions that meet the specific needs of each client. Our commitment to excellence has made us a trusted partner in the hardware manufacturing industry, dedicated to bringing the highest standards of design and engineering to every project.</p>
+            <h3>Our Location</h3>
+            <p>We are located in Surat, Gujarat, India.
+            <p>G-16 Shantiniketan Flora Business Hub, Mota Varachha, Surat - 394101.</p> To find us, click the map below:</p>
+            <a href="https://maps.app.goo.gl/cQVZXRFrwkBn4BPh8" target="_blank">View on Google Maps</a>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <div class="wrapper">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or would like to inquire about our products, feel free to reach out to us. Click below to connect with us directly via WhatsApp.</p>
+            <p><a href="https://wa.me/918460888016" target="_blank">Contact us on WhatsApp</a></p>
+            <p>Or you can call us directly at: <a href="tel:+918460888016">+91-8460888016</a></p>
+        </div>
+    </section>
+
+    <section id="OurPresence">
+        <div class="wrapper">
+            <h2>Our Presence Across India</h2> <!-- Added Heading -->
+            <p>We are proud to have a strong presence across various regions in India. Our network ensures that our premium products reach every corner of the country, enabling us to serve our customers with excellence.</p>
+            <div class="map-container">
+                <img src="D:/Mexis/Untitled design (25).png" alt="India Map" class="india-map" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Mexis. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
