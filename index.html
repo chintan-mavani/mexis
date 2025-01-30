@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO Title Tag -->
+    <!-- SEO Tags -->
     <title>Mexis - Premium Home Furniture Design, Kitchen Solutions & Wardrobe Systems</title>
-    <!-- Meta Description -->
     <meta name="description" content="Mexis offers premium home furniture design solutions, including kitchen tandem systems, wardrobe hardware, and modern aluminum profiles. Explore our innovative designs for your home.">
-    <!-- Keywords Meta Tag (Optional) -->
     <meta name="keywords" content="home furniture design, kitchen furniture, wardrobe solutions, tandem systems, aluminum profiles, modern furniture design">
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://www.mexis.in" />
-    <!-- Open Graph Tags for Social Media -->
+    <!-- Open Graph Tags -->
     <meta property="og:title" content="Mexis - Premium Home Furniture Design, Kitchen Solutions & Wardrobe Systems">
     <meta property="og:description" content="Mexis offers premium home furniture design solutions, including kitchen tandem systems, wardrobe hardware, and modern aluminum profiles. Explore our innovative designs for your home.">
     <meta property="og:image" content="https://www.mexis.in/Image 1.jpg">
     <meta property="og:url" content="https://www.mexis.in">
     <meta property="og:type" content="website">
-    <!-- Structured Data (Schema Markup) -->
+    <!-- Structured Data -->
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -42,149 +39,350 @@
                 "areaServed": "India"
             }
         }
-    </script>   
-    <style>
-     <!-- Force HTTPS Redirect -->
-     <script>
-    if (window.location.protocol !== "https:") {
-        window.location.href = "https://www.mexis.in" + window.location.pathname + window.location.search + window.location.hash;
-    }
     </script>
-        
-        /* General body and text styling */
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Leaflet.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        /* General Styles */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
             color: #333;
+            line-height: 1.6;
+            text-align: center;
+            overflow-x: scroll;
         }
 
-        /* Wrapper for uniform styling */
         .wrapper {
-            width: 80%;
+            width: 90%;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        /* Logo container styling */
-        .logo-container h1 {
-            font-size: 3em;
-            color: #3e06c3; /* Blue color */
-            margin: 0;
-            text-align: center;
+        /* Header */
+        header {
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            padding: 15px 0;
+            position: relative;
+            overflow: hidden;
         }
 
-        /* Navigation bar styling */
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(228, 217, 217, 0.1), rgba(255, 255, 255, 0.05));
+            animation: animateBackground 10s infinite linear;
+        }
+
+        @keyframes animateBackground {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #fff;
+            margin: 0;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Navigation Bar */
         nav {
-            background-color: #3e06c3;
-            padding: 15px 0;
-            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
         }
 
         nav a {
-            color: #fff;
-            margin: 0 2em;
+            color: #3e06c3;
+            margin: 0 1.5em;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
+            font-weight: 600;
+            font-size: 1em;
             text-transform: uppercase;
-        }
-
-        nav a:hover {
-            color: #ff4d00;
-        }
-
-        /* Banner styling */
-        .banner {
-            background-image: url('Image 1.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 450px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
+            transition: color 0.3s ease;
             position: relative;
         }
 
-        .banner h1 {
-            font-size: 4em;
-            text-shadow: 2px 2px 5px #000;
-            margin: 0;
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #ff4d00;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
         }
 
-        /* Product section styling */
-        .products {
-            padding: 60px 0;
-            text-align: center;
-            background-color: #f9f9f9;
-        }
-
-        .products h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2em;
-            padding: 0 10%;
-        }
-
-        .product {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 20px;
-            text-align: center;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .product:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-        }
-
-        .product img {
+        nav a:hover::after {
             width: 100%;
-            height: auto;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
         }
 
-        .product img:hover {
+        /* Banner Section */
+        .banner {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(45deg, #ff6b6b, #556270);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            animation: animateBackground 10s infinite linear;
+        }
+
+        .banner-content {
+            text-align: center;
+            color: white;
+            z-index: 2;
+        }
+
+        .banner-content h1 {
+            font-size: 4em;
+            margin: 0;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+
+        .banner-content p {
+            font-size: 1.5em;
+            margin: 20px 0;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .banner-content .cta-button {
+            padding: 15px 30px;
+            background-color: #ff4d00;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .banner-content .cta-button:hover {
+            background-color: #e63e00;
             transform: scale(1.05);
+        }
+
+        /* Floating Shapes */
+        .shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .shape.circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .shape.triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .shape.square {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+            100% { transform: translateY(0) rotate(360deg); }
         }
 
         /* About Us Section */
         #about {
-            padding: 60px 0;
+            padding: 80px 0;
             background-color: #fff;
-            text-align: center;
-        }
-
-        #about h2 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #333;
+            animation: fadeIn 2s ease-in-out;
         }
 
         #about p {
-            font-size: 1.2em;
-            line-height: 1.6;
-            color: #555;
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            animation: fadeInUp 1.5s ease-in-out;
         }
 
         #about h3 {
             font-size: 2em;
-            margin-top: 30px;
+            margin-bottom: 20px;
+            color: #3e06c3;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+
+        #about ul {
+            list-style: none;
+            padding: 0;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        #about ul li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        /* Reel Section */
+        .reel-section {
+            padding: 80px 0;
+            background-color: #f4f4f4;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .reel-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #333;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+
+        .reel-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .reel-item {
+            position: relative;
+            width: 300px;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .reel-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .reel-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .reel-item:hover video {
+            transform: scale(1.05);
+        }
+
+        .reel-item .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3em;
+            color: #fff;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .reel-item:hover .play-icon {
+            opacity: 1;
+        }
+
+        /* Product Videos Section */
+        .product-videos {
+            padding: 80px 0;
+            background-color: #fff;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .product-videos h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #333;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .video-item {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .video-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .video-item video {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .video-item h3 {
+            font-size: 1.5em;
+            margin: 15px 0;
+            color: #3e06c3;
+        }
+
+        .video-item p {
+            font-size: 1em;
+            color: #555;
+            padding: 0 15px 15px;
+            text-align: justify;
         }
 
         /* Contact Us Section */
@@ -192,69 +390,80 @@
             padding: 60px 0;
             background-color: #f9f9f9;
             text-align: center;
+            animation: fadeIn 2s ease-in-out;
         }
 
         #contact h2 {
             font-size: 2.5em;
             margin-bottom: 20px;
             color: #333;
+            animation: fadeInDown 1.5s ease-in-out;
         }
 
         #contact p {
             font-size: 1.2em;
             color: #555;
+            animation: fadeInUp 1.5s ease-in-out;
         }
 
         #contact a {
             color: #ff4d00;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
 
         #contact a:hover {
-            text-decoration: underline;
+            color: #e63e00;
         }
 
-        /* Our Presence Section */
-        #OurPresence {
-            padding: 60px 0;
-            background-color: #fff;
-            text-align: center;
-        }
-
-        .map-container {
-            display: flex;
-            justify-content: center;  /* Centering the map horizontally */
-            align-items: center;  /* Centering the map vertically */
-            margin-top: 20px;
-        }
-
-        .india-map {
-            max-width: 100%;  /* Ensure the map scales appropriately */
-            height: auto;
-            max-height: 500px;  /* Set a maximum height for the map */
-        }
-
-        /* Footer styling */
+        /* Footer Section */
         footer {
             background-color: #333;
             color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            font-size: 1em;
+            padding: 40px 0;
+            animation: fadeIn 2s ease-in-out;
         }
 
         footer p {
             margin: 0;
+            font-size: 1em;
         }
 
-        footer a {
+        footer .social-icons {
+            margin-top: 20px;
+        }
+
+        footer .social-icons a {
             color: #fff;
-            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
         }
 
-        footer a:hover {
-            text-decoration: underline;
+        footer .social-icons a:hover {
+            color: #ff4d00;
+        }
+
+        /* Keyframes for Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
     </style>
 </head>
@@ -262,85 +471,103 @@
 
     <!-- Header -->
     <header>
-        <div class="logo-container">
-            <h1>Mexis</h1> <!-- Company name as logo -->
+        <div class="wrapper">
+            <h1>Mexis</h1>
         </div>
     </header>
 
     <!-- Navigation Bar -->
     <nav>
-        <a href="#">Home</a>
-        <a href="#products">Products</a>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact</a>
-        <a href="#OurPresence">Our Presence</a>
+        <div class="wrapper">
+            <a href="#">Home</a>
+            <a href="#about">About Us</a>
+            <a href="products.html">Products</a>
+            <a href="#contact">Contact</a>
+            <a href="#OurPresence">Our Presence</a>
+        </div>
     </nav>
 
     <!-- Banner Section -->
     <div class="banner">
-        <h1>Welcome to Mexis</h1>
+        <!-- Floating shapes -->
+        <div class="shape circle" style="top: 10%; left: 5%;"></div>
+        <div class="shape triangle" style="top: 20%; right: 10%;"></div>
+        <div class="shape square" style="bottom: 10%; left: 15%;"></div>
+        <div class="shape circle" style="bottom: 20%; right: 5%;"></div>
+
+        <!-- Banner content -->
+        <div class="banner-content">
+            <h1>Welcome to Mexis</h1>
+            <p>Innovative Solutions for Modern Living</p>
+            <button class="cta-button" onclick="window.location.href='products.html'">Explore Our Products</button>
+        </div>
     </div>
 
-    <!-- Products Section -->
-    <section class="products" id="products">
+    <!-- About Us Section -->
+    <section id="about">
         <div class="wrapper">
-            <h2>Our Products</h2>
-            <div class="product-grid">
-                <!-- Glass Soft Close Tandem-->
-                <div class="product">
-                    <img src="Kitchen Tandem.jpg" alt="Soft Close Channel">
-                    <h3>Glass Tandem Systems</h3>
-                    <p>Transform your kitchen or living space with our Glass Soft Close Tandem systems, combining elegance with superior functionality. Designed to bring a modern touch to your interiors, these high-quality tandem boxes feature sleek glass panels that allow for a clear, stylish view of your stored items, while offering smooth and effortless closing action.</p>
-                </div>
+            <p><strong>Mexis</strong> is a leading manufacturer and supplier of <strong>innovative hardware solutions</strong>, specializing in premium products such as <strong>soft close channels</strong>, <strong>aluminum profiles</strong>, <strong>tandem systems</strong>, and <strong>advanced lock systems</strong>. With a strong focus on quality, durability, and cutting-edge functionality, we are committed to delivering the best in <strong>home furniture design</strong>, <strong>wardrobe solutions</strong>, and <strong>modern kitchen hardware</strong>.</p>
 
-                <!-- Aluminium Profiles Product -->
-                <div class="product">
-                    <img src="glassprofile.jpg" alt="Aluminium Profiles">
-                    <h3>Aluminium Profiles</h3>
-                    <p>Mexis Aluminium profiles are Crafted with precision, our aluminum profiles are resistant to corrosion, ensuring long-lasting functionality even in demanding environments. Available in a variety of shapes and sizes, they can be customized to meet your specific needs, making them an essential component for any construction or design project.</p>
-                </div>
+            <p>At Mexis, we understand the importance of <strong>modern interior design</strong> and <strong>space optimization</strong>. Our products are meticulously designed to enhance the functionality and aesthetics of your living spaces, whether it's your <strong>kitchen</strong>, <strong>wardrobe</strong>, or <strong>office</strong>. From <strong>soft-close drawer systems</strong> to <strong>aluminum profiles for furniture</strong>, we offer a wide range of solutions that cater to both residential and commercial needs.</p>
+    
+            <p>We take pride in our extensive network of over <strong>30 companies across India</strong>, where we provide <strong>private label manufacturing</strong> services. Our ability to deliver <strong>custom hardware solutions</strong> tailored to the specific needs of our clients has made us a trusted partner in the <strong>hardware manufacturing industry</strong>. Whether you're looking for <strong>kitchen tandem boxes</strong>, <strong>sliding fittings</strong>, or <strong>mortise locks</strong>, Mexis ensures the highest standards of design and engineering in every product.</p>
+    
+            <p>Our state-of-the-art manufacturing facility in <strong>Surat, Gujarat</strong>, is equipped with advanced technology and a skilled workforce, enabling us to maintain consistent quality and meet the growing demands of our clients. We are dedicated to innovation, sustainability, and customer satisfaction, making us a preferred choice for <strong>home furniture hardware</strong> and <strong>interior design solutions</strong> across India.</p>
+    
+            <h3>Why Choose Mexis?</h3>
+            <ul>
+                <li><strong>Premium Quality</strong>: Our products are crafted using high-grade materials to ensure durability and long-lasting performance.</li>
+                <li><strong>Innovative Designs</strong>: We stay ahead of industry trends to offer modern and functional hardware solutions.</li>
+                <li><strong>Custom Solutions</strong>: We provide tailored products to meet the unique needs of our clients.</li>
+                <li><strong>Nationwide Presence</strong>: With a strong distribution network, we serve customers across India.</li>
+                <li><strong>Expert Support</strong>: Our team of experts is always available to assist you with product selection and installation.</li>
+            </ul>
+    
+            <h3>Our Mission</h3>
+            <p>At Mexis, our mission is to revolutionize the <strong>hardware manufacturing industry</strong> by delivering innovative, high-quality products that enhance the functionality and aesthetics of modern living spaces. We strive to be a trusted partner for our clients, offering reliable solutions that exceed expectations.</p>
+    
+            <h3>Our Vision</h3>
+            <p>Our vision is to become a global leader in <strong>furniture hardware solutions</strong>, known for our commitment to excellence, innovation, and customer satisfaction. We aim to set new benchmarks in the industry by continuously improving our products and services.</p>
+        </div>
+    </section>
 
-                <!-- Kitchen Tandem Box -->
-                <div class="product">
-                    <img src="Tandem (1).jpg" alt="Kitchen Tandem Box">
-                    <h3>Kitchen Tandem Box</h3>
-                    <p>Elevate your kitchen's functionality with our premium Kitchen Tandem Box systems. Designed for seamless integration into your kitchen cabinets, these high-quality storage solutions provide easy access to your kitchen essentials while maximizing space efficiency.</p>
+    <!-- Reel Section -->
+    <section class="reel-section">
+        <div class="wrapper">
+            <h2>Our Reels</h2>
+            <div class="reel-container">
+                <div class="reel-item" onclick="playVideo(this)">
+                    <video src="D:\Mexis\Push Open And Soft Close  Drawer Slides Concealed Drawer Slide Rail Kitchen Drawer Slide.mp4" muted loop></video>
+                    <div class="play-icon"><i class="fas fa-play"></i></div>
                 </div>
-
-                <!-- Mortise Lock Product -->
-                <div class="product">
-                    <img src="Mortise Lockbody.png" alt="Mortise Lock">
-                    <h3>Mortise Lock</h3>
-                    <p>Our Mortise Locks offer superior security and durability, ideal for doors in both residential and commercial settings. Designed for easy installation, they provide enhanced protection with a sleek, compact design. Available in various finishes, these locks ensure long-lasting performance and reliability.</p>
+                <div class="reel-item" onclick="playVideo(this)">
+                    <video src="D:\Mexis\Black Stainless Steel 5085 European Mortise Lock Body Anti-theft Double Lock.mp4" muted loop></video>
+                    <div class="play-icon"><i class="fas fa-play"></i></div>
                 </div>
-
-                <!-- Telescopic Channel -->
-                <div class="product">
-                    <img src="Telescopic Channel.webp" alt="Telescopic Channel">
-                    <h3>Telescopic Channel</h3>
-                    <p>Whether it's for kitchen drawers, wardrobe storage, or office solutions, Mexis Telescopic Channels deliver unmatched performance, style, and reliability. Choose from a range of sizes and finishes tailored to your specific needs and enjoy the seamless blend of functionality and sophistication in your interiors.</p>
-                </div>
-
-                <!-- Sliding Fitting -->
-                <div class="product">
-                    <img src="sliding-roller.webp" alt="Sliding Fitting">
-                    <h3>Sliding Fitting</h3>
-                    <p>Mexis sliding door track system designed for industrial-grade performance and durability. Built to handle heavy-duty applications, it combines smooth operation with robust strength for seamless functionality.</p>
+                <div class="reel-item" onclick="playVideo(this)">
+                    <video src="D:\Mexis\videoplayback (2).mp4" muted loop></video>
+                    <div class="play-icon"><i class="fas fa-play"></i></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section id="about">
+    <!-- Product Videos Section -->
+    <section class="product-videos">
         <div class="wrapper">
-            <h2>About Us</h2>
-            <p>Mexis is a leading manufacturer of innovative hardware solutions, providing premium products like soft close channels, aluminum profiles, and advanced lock systems. Our products are designed to ensure quality, durability, and cutting-edge functionality, offering the best in home and business security, design, and performance.</p>
-            <p>We are proud to work with more than 30 companies across India for private label manufacturing, delivering custom solutions that meet the specific needs of each client. Our commitment to excellence has made us a trusted partner in the hardware manufacturing industry, dedicated to bringing the highest standards of design and engineering to every project.</p>
-            <h3>Our Location</h3>
-            <p>We are located in Surat, Gujarat, India.
-            <p>G-16 Shantiniketan Flora Business Hub, Mota Varachha, Surat - 394101.</p> To find us, click the map below:</p>
-            <a href="https://maps.app.goo.gl/cQVZXRFrwkBn4BPh8" target="_blank">View on Google Maps</a>
+            <h2>Product Videos</h2>
+            <div class="video-grid">
+                <div class="video-item">
+                    <video src="D:\Mexis\Tandem Installation.mp4" controls></video>
+                    <h3>Tandem Systems</h3>
+                    <p>Transform your kitchen or living space with our Soft Close Tandem systems, combining elegance with superior functionality. Designed to bring a modern touch to your interiors, these high-quality tandem boxes feature sleek design that allow for a clear, stylish view of your kitchen, while offering smooth and effortless closing action.</p>
+                </div>
+                <div class="video-item">
+                    <video src="D:\Enora\WhatsApp Video 2024-02-29 at 12.57.05_e0ce1ed1.mp4" controls></video>
+                    <h3>Locking Solution</h3>
+                    <p>Whether you're upgrading a wardrobe, main door, or cabinets, our locks are designed to complement modern aesthetics without sacrificing safety. From mortise lock bodies to pin cylinders and digital locks, our solutions cater to a variety of security needs, delivering seamless functionality and enhanced protection.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -350,24 +577,84 @@
             <h2>Contact Us</h2>
             <p>If you have any questions or would like to inquire about our products, feel free to reach out to us. Click below to connect with us directly via WhatsApp.</p>
             <p><a href="https://wa.me/918460888016" target="_blank">Contact us on WhatsApp</a></p>
-            <p>Or you can mail us directly at: <a href="mail:ayanenterprise0821@gmail.com ">ayanenterprise0821@gmail.com </a></p>
+            <p>or you can mail us directly at: <a href="mailto:ayanenterprise0821@gmail.com">ayanenterprise0821@gmail.com</a></p>
+            <h3>Our Location</h3>
+            <p>We are located in Surat, Gujarat, India.</p>
+            <p>G-16 Shantiniketan Flora Business Hub, Mota Varachha, Surat - 394101.</p>
+            <p>To find us, click the map below:</p>
+            <a href="https://maps.app.goo.gl/cQVZXRFrwkBn4BPh8" target="_blank">View on Google Maps</a>
         </div>
     </section>
 
+    <!-- Our Presence Section -->
     <section id="OurPresence">
         <div class="wrapper">
-            <h2>Our Presence Across India</h2> <!-- Added Heading -->
+            <h2>Our Presence Across India</h2>
             <p>We are proud to have a strong presence across various regions in India. Our network ensures that our premium products reach every corner of the country, enabling us to serve our customers with excellence.</p>
             <div class="map-container">
-                <img src="Untitled design (25).png" alt="India Map" class="india-map" />
+                <!-- Map Container -->
+                <div id="interactive-map" style="height: 500px; width: 100%;"></div>
             </div>
         </div>
     </section>
 
     <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Mexis. All rights reserved.</p>
+        <div class="wrapper">
+            <p>&copy; 2025 Mexis. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
     </footer>
 
+    <script>
+        // Function to play reel videos
+        function playVideo(element) {
+            const video = element.querySelector('video');
+            if (video.paused) {
+                video.play();
+                element.querySelector('.play-icon').style.display = 'none';
+            } else {
+                video.pause();
+                element.querySelector('.play-icon').style.display = 'block';
+            }
+        }
+    </script>
+
+    <!-- Leaflet.js CSS and JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map
+        const map = L.map('interactive-map').setView([20.5937, 78.9629], 5); // Center on India
+
+        // Add a tile layer (map background)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Add markers for your presence
+        const locations = [
+            { name: "Indore", coords: [22.7196, 75.8577], info: "10+ stores" },
+            { name: "Nashik", coords: [19.9975, 73.7898], info: "5+ stores" },
+            { name: "Rajasthan", coords: [26.9124, 75.7873], info: "5+ stores" },
+            { name: "Bhubneshwar", coords: [20.2961, 85.8245], info: "10+ stores" },
+            { name: "Surat", coords: [21.1702, 72.8311], info: "60+ stores" },
+            { name: "Hyderabad", coords: [17.3850, 78.4867], info: "10+ stores" },
+            { name: "Bhavnagar", coords: [21.7645, 72.1519], info: "5+ stores" },
+            { name: "Vijayvada", coords: [16.5062, 80.6480], info: "5+ stores" },
+            { name: "Satara", coords: [17.6805, 74.0183], info: "3+ stores" },
+            // Add more locations as needed
+        ];
+
+        locations.forEach(location => {
+            const marker = L.marker(location.coords).addTo(map);
+            marker.bindPopup(`<b>${location.name}</b><br>${location.info}`);
+        });
+    </script>
 </body>
 </html>
