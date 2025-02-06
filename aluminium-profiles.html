@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mexis - Aluminium Profiles</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            text-align: center;
+            overflow-x: scroll;
+        }
+
+        .wrapper {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
+            padding: 15px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(228, 217, 217, 0.1), rgba(255, 255, 255, 0.05));
+            animation: animateBackground 10s infinite linear;
+        }
+
+        @keyframes animateBackground {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+            animation: fadeInDown 1.5s ease-in-out;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #fff;
+            margin: 0;
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Floating Shapes */
+        .shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            animation: float 6s infinite ease-in-out;
+        }
+
+        .shape.circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .shape.triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .shape.square {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+            100% { transform: translateY(0) rotate(360deg); }
+        }
+        
+        /* Navigation Bar */
+        nav {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #3e06c3;
+            margin: 0 1.5em;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #ff4d00;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 80px 0;
+            background-color: #fff;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .products::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            z-index: 1;
+            animation: animateBackground 10s infinite linear;
+        }
+
+        .products h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #333;
+            position: relative;
+            z-index: 2;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2em;
+            position: relative;
+            z-index: 2;
+        }
+
+        .product {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+            z-index: 1;
+            animation: animateBackground 10s infinite linear;
+        }
+
+        .product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .product img:hover {
+            transform: scale(1.05);
+        }
+
+        .product h3 {
+            font-size: 1.5em;
+            margin: 15px 0;
+            color: #3e06c3;
+            position: relative;
+            z-index: 2;
+        }
+
+        .product p {
+            font-size: 1em;
+            color: #555;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Color Icons */
+        .color-options {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .color-option {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid #ddd;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .color-option:hover {
+            transform: scale(1.1);
+            border-color: #ff4d00;
+        }
+
+        .black { background-color: #000; }
+        .matt { background-color: #555; }
+        .rose-gold { background-color: #b76e79; }
+        .gold { background-color: #d7c55f; }
+        .silver { background-color: #c0c0c0; }
+        .cp { background-color: #371d0b; }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+            position: relative;
+            z-index: 2;
+        }
+
+        footer .social-icons {
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        footer .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #ff4d00;
+        }
+
+        /* Animation for Background */
+        @keyframes animateBackground {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="wrapper">
+            <h1>Mexis</h1>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="wrapper">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="index.html#OurPresence">Our Presence</a>
+        </div>
+    </nav>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="wrapper">
+            <h2>Aluminium Profiles</h2>
+            <div class="product-grid">
+                <!-- G Profile -->
+                <div class="product">
+                    <img src="D:\Mexis\G profiles\2 (1).jpg" alt="G Profile">
+                    <h3>G Handle Profile</h3>
+                    <p>
+                        The G Profile is a versatile aluminium profile designed for modern architectural applications. It is lightweight, durable, and available in various finishes.
+                    </p>
+                    <div class="color-options">
+                        <div class="color-option black"></div>
+                        <div class="color-option matt"></div>
+                        <div class="color-option rose-gold"></div>
+                        <div class="color-option gold"></div>
+                        <div class="color-option silver"></div>
+                        <div class="color-option cp"></div>
+                    </div>
+                </div>
+
+                <!-- J-3 Handle Profile -->
+                <div class="product">
+                    <img src="D:\Mexis\J profile\IMG-20220802-WA0028.jpg" alt="J Profile">
+                    <h3>J-3 Handle Profile</h3>
+                    <p>
+                        The J Profile is ideal for edge finishing and framing applications. It provides a sleek and polished look, available in multiple anodized finishes.
+                    </p>
+                    <div class="color-options">
+                        <div class="color-option black"></div>
+                        <div class="color-option matt"></div>
+                        <div class="color-option rose-gold"></div>
+                        <div class="color-option gold"></div>
+                        <div class="color-option silver"></div>
+                        <div class="color-option cp"></div>
+                    </div>
+                </div>
+
+                <!-- T Patti -->
+                <div class="product">
+                    <img src="D:\Mexis\T patti\t profiles.jpg" alt="T Patti">
+                    <h3>T Patti</h3>
+                    <p>
+                        The T Patti is a robust aluminium profile used for structural support and joining applications. It is available in a variety of finishes to match your design needs.
+                    </p>
+                    <div class="color-options">
+                        <div class="color-option black"></div>
+                        <div class="color-option matt"></div>
+                        <div class="color-option rose-gold"></div>
+                        <div class="color-option gold"></div>
+                        <div class="color-option silver"></div>
+                        <div class="color-option cp"></div>
+                    </div>
+                </div>
+
+                <!-- F round Handle Profile-->
+                <div class="product">
+                    <img src="D:\Mexis\J profile.jpg" alt="F round Handle Profile">
+                    <h3>F round Handle Profile</h3>
+                    <p>
+                        Whether you're looking for a functional handle or a stylish addition to your design, the F Round Handle Profile offers a perfect blend of form and function. It is available in a variety of finishes to match your design needs.
+                    </p>
+                    <div class="color-options">
+                        <div class="color-option black"></div>
+                        <div class="color-option matt"></div>
+                        <div class="color-option rose-gold"></div>
+                        <div class="color-option gold"></div>
+                        <div class="color-option silver"></div>
+                        <div class="color-option cp"></div>
+                    </div>
+                </div>
+
+                <!-- Frameless Handle Profile -->
+                <div class="product">
+                    <img src="D:\Mexis\IMG-20220802-WA0009.jpg"alt="Frameless Handle profile">
+                    <h3>Frameless Handle Profile</h3>
+                    <p>
+                        The Frameless Handle Profile is a sleek and durable aluminium profile designed for both functionality and aesthetics. It is ideal for structural support and joining applications, available in various finishes to complement your design requirements.
+                    </p>
+                    <div class="color-options">
+                        <div class="color-option black"></div>
+                        <div class="color-option matt"></div>
+                        <div class="color-option rose-gold"></div>
+                        <div class="color-option gold"></div>
+                        <div class="color-option silver"></div>
+                        <div class="color-option cp"></div>
+                    </div>
+                </div>
+
+                <!-- U- Frameless Frame Profile -->
+                <div class="product">
+                    <img src="D:\Mexis\IMG-20220802-WA0035.jpg" alt="U- Frameless Frame Profile">
+                    <h3>U- Frameless Frame Profile </h3>
+                    <p>
+                        The U-Frameless Frame Profile is a sturdy aluminium profile designed for structural support and seamless joining in modern designs. Available in various finishes, it combines durability with aesthetic versatility. It comes in a variety of finishes to suit your design preferences.
+                    </p>
+                    <div class="color-options">
+                        <div class="color-option black"></div>
+                        <div class="color-option matt"></div>
+                        <div class="color-option rose-gold"></div>
+                        <div class="color-option gold"></div>
+                        <div class="color-option silver"></div>
+                        <div class="color-option cp"></div>
+                    </div>
+                </div>
+
+                <!-- Half cut Handle profile -->
+                <div class="product">
+                    <img src="D:\Mexis\IMG-20220802-WA0036.jpg" alt="Half cut Handle profile">
+                    <h3>Half cut Handle profile</h3>
+                    <p>
+                        The Half Cut Handle Profile is a versatile aluminium profile designed for structural support and seamless integration. It offers a modern look and is available in multiple finishes to suit your design preferences.
+                    <div class="color-options">
+                        <div class="color-option black"></div>
+                        <div class="color-option matt"></div>
+                        <div class="color-option rose-gold"></div>
+                        <div class="color-option gold"></div>
+                        <div class="color-option silver"></div>
+                        <div class="color-option cp"></div>
+                    </div>
+                </div>
+
+
+                <!-- Glass Handle Profile -->
+                <div class="product">
+                    <img src="D:\Mexis\IMG-20220802-WA0033 (1).jpg" alt="Glass Handle Profile">
+                    <h3>Glass Handle Profile</h3>
+                    <p>
+                        The Glass Handle Profile is designed for glass door applications, offering both functionality and aesthetic appeal. Available in multiple finishes to complement your design.
+                    </p>
+                    <div class="color-options">
+                        <div class="color-option black"></div>
+                        <div class="color-option matt"></div>
+                        <div class="color-option rose-gold"></div>
+                        <div class="color-option gold"></div>
+                        <div class="color-option silver"></div>
+                        <div class="color-option cp"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="wrapper">
+            <p>&copy; 2025 Mexis. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
