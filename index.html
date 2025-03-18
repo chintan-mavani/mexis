@@ -734,6 +734,12 @@
     </footer>
 
     <script>
+        // Function to toggle mobile menu
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+
         // Function to play reel videos
         function playVideo(element) {
             const video = element.querySelector('video');
