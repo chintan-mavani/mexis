@@ -175,7 +175,37 @@
         nav a:hover::after {
             width: 100%;
         }
+        /* Hamburger Menu for Mobile */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
 
+        .menu-toggle span {
+            height: 3px;
+            width: 25px;
+            background-color: #3e06c3;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+            nav .wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav a {
+                display: none;
+                margin: 10px 0;
+            }
+            nav.active a {
+                display: block;
+            }
+        }
         /* Banner Section */
         .banner {
             position: relative;
@@ -547,6 +577,11 @@
     <!-- Navigation Bar -->
     <nav>
         <div class="wrapper">
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <a href="#">Home</a>
             <a href="#about">About Us</a>
             <a href="products.html">Products</a>
