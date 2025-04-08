@@ -358,9 +358,18 @@
             margin-top: 0.25rem;
         }
 
-        /* Video Reel Section */
-        .video-reel {
-            background-color: var(--light-gray);
+        /* Reel Section */
+        .reel-section {
+            padding: 80px 0;
+            background-color: #f4f4f4;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .reel-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #333;
+            animation: fadeInDown 1.5s ease-in-out;
         }
 
         .reel-container {
@@ -370,48 +379,47 @@
             flex-wrap: wrap;
         }
 
-        .reel-slider {
-            border-radius: var(--rounded-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-        }
-
         .reel-item {
             position: relative;
             width: 300px;
             height: 500px;
-            background-color: black;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .reel-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
         }
 
         .reel-item video {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.3s ease;
         }
 
-        .play-btn {
+        .reel-item:hover video {
+            transform: scale(1.05);
+        }
+
+        .reel-item .play-icon {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 80px;
-            height: 80px;
-            background-color: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(5px);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            transition: var(--transition);
-            border: none;
+            font-size: 3em;
+            color: #fff;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
         }
 
-        .play-btn:hover {
-            background-color: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%) scale(1.1);
+        .reel-item:hover .play-icon {
+            opacity: 1;
         }
 
         /* Products Section */
@@ -756,6 +764,11 @@
             .section-title {
                 font-size: 2rem;
             }
+
+            .reel-item {
+                width: 100%;
+                max-width: 400px;
+            }
         }
 
         @media (max-width: 576px) {
@@ -800,12 +813,12 @@
         </div>
     </header>
     
-        <!-- Hero Section -->
+    <!-- Hero Section -->
     <section class="hero">
         <!-- Floating background elements -->
-        <div class="floating-element" style="width: 300px; height: 300px; top: 30%; left: 80%;"></div>
-        <div class="floating-element" style="width: 200px; height: 200px; bottom: 15%; right: 29%;"></div>
-        <div class="floating-element" style="width: 150px; height: 150px; top: 30%; right: 46%;"></div>
+        <div class="floating-element" style="width: 300px; height: 300px; top: 10%; left: 5%;"></div>
+        <div class="floating-element" style="width: 200px; height: 200px; bottom: 10%; right: 15%;"></div>
+        <div class="floating-element" style="width: 150px; height: 150px; top: 20%; right: 10%;"></div>
         
         <!-- Language floating elements -->
         <div class="language-float" style="top: 15%; left: 20%;">Namaste</div>
@@ -883,38 +896,24 @@
     </section>
 
     <!-- Video Reel Section -->
-    <section class="section video-reel">
+    <section class="section reel-section">
         <div class="container">
             <h2 class="section-title">Our Product Showcase</h2>
             
             <div class="reel-container">
-                <div class="reel-slider swiper">
-                    <div class="swiper-wrapper">
-                        <div class="reel-item swiper-slide">
-                            <video src="Push Open And Soft Close  Drawer Slides Concealed Drawer Slide Rail Kitchen Drawer Slide.mp4" muted loop></video>
-                            <button class="play-btn">
-                                <i class="fas fa-play"></i>
-                            </button>
-                        </div>
-                        
-                        <div class="reel-item swiper-slide">
-                            <video src="Black Stainless Steel 5085 European Mortise Lock Body Anti-theft Double Lock.mp4" muted loop></video>
-                            <button class="play-btn">
-                                <i class="fas fa-play"></i>
-                            </button>
-                        </div>
-                        
-                        <div class="reel-item swiper-slide">
-                            <video src="Track Roller Barn Door Track System Door Accessories Hanging 6 Wheels Sliding Track Roller.mp4" muted loop></video>
-                            <button class="play-btn">
-                                <i class="fas fa-play"></i>
-                            </button>
-                        </div>
-                    </div>
-                    
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                <div class="reel-item">
+                    <video src="Push Open And Soft Close  Drawer Slides Concealed Drawer Slide Rail Kitchen Drawer Slide.mp4" muted loop></video>
+                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                </div>
+                
+                <div class="reel-item">
+                    <video src="Black Stainless Steel 5085 European Mortise Lock Body Anti-theft Double Lock.mp4" muted loop></video>
+                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                </div>
+                
+                <div class="reel-item">
+                    <video src="Track Roller Barn Door Track System Door Accessories Hanging 6 Wheels Sliding Track Roller.mp4" muted loop></video>
+                    <div class="play-icon"><i class="fas fa-play"></i></div>
                 </div>
             </div>
         </div>
@@ -1171,23 +1170,6 @@
             }
         });
         
-        // Initialize Swiper for Reel Slider
-        const reelSwiper = new Swiper('.reel-slider', {
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-        });
-        
         // Initialize Swiper for Testimonials
         const testimonialSwiper = new Swiper('.testimonial-slider', {
             loop: true,
@@ -1201,22 +1183,34 @@
             },
         });
         
-        // Play Video on Click
-        document.querySelectorAll('.play-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const video = this.parentElement.querySelector('video');
+        // Play Video on Click for Reel Items
+        document.querySelectorAll('.reel-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const video = this.querySelector('video');
+                const playIcon = this.querySelector('.play-icon');
+                
                 if (video.paused) {
                     video.play();
-                    this.style.display = 'none';
+                    playIcon.style.opacity = '0';
                 } else {
                     video.pause();
-                    this.style.display = 'flex';
+                    playIcon.style.opacity = '0.8';
                 }
             });
         });
         
-        // Initialize Map
-        const map = L.map('interactive-map').setView([20.5937, 78.9629], 5);
+        // Initialize Map - Focused on India with boundaries
+        const map = L.map('interactive-map', {
+            maxBounds: [
+                [6.0, 68.0], // Southwest coordinates
+                [36.0, 98.0]  // Northeast coordinates
+            ],
+            maxBoundsViscosity: 1.0 // Strict bounds
+        }).setView([20.5937, 78.9629], 5);
+        
+        // Restrict zoom level to keep focus on India
+        map.setMinZoom(4);
+        map.setMaxZoom(7);
         
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
