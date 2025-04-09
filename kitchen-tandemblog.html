@@ -73,6 +73,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
             color: var(--dark);
@@ -156,18 +160,6 @@
             box-shadow: var(--shadow-md);
         }
 
-        .btn-secondary {
-            background-color: var(--secondary);
-            color: white;
-            box-shadow: var(--shadow);
-        }
-
-        .btn-secondary:hover {
-            opacity: 0.9;
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-
         /* Header */
         header {
             position: fixed;
@@ -193,7 +185,7 @@
         }
 
         .logo {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
             color: var(--primary);
             display: flex;
@@ -243,6 +235,7 @@
             color: var(--dark);
             font-size: 1.5rem;
             cursor: pointer;
+            transition: var(--transition);
         }
 
         /* Article Hero */
@@ -275,7 +268,7 @@
         }
 
         .article-hero-title {
-            font-size: 3rem;
+            font-size: 2.8rem;
             margin-bottom: 1.5rem;
             color: var(--dark);
             line-height: 1.2;
@@ -300,6 +293,9 @@
         .article-date {
             color: var(--gray);
             font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
         /* Article Content */
@@ -316,6 +312,11 @@
             border-radius: var(--rounded-lg);
             margin: 3rem 0;
             box-shadow: var(--shadow-lg);
+            transition: transform 0.3s ease;
+        }
+
+        .article-image:hover {
+            transform: scale(1.01);
         }
 
         .article-content {
@@ -332,6 +333,18 @@
             font-size: 1.8rem;
             margin: 3rem 0 1.5rem;
             color: var(--primary-dark);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .article-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary);
         }
 
         .article-content h3 {
@@ -347,14 +360,56 @@
 
         .article-content li {
             margin-bottom: 0.75rem;
+            position: relative;
+        }
+
+        .article-content ul li::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            margin-right: 0.75rem;
+            position: absolute;
+            left: -1.5rem;
+            top: 0.6rem;
+        }
+
+        .article-content ol {
+            counter-reset: item;
+            list-style: none;
+        }
+
+        .article-content ol li {
+            counter-increment: item;
+        }
+
+        .article-content ol li::before {
+            content: counter(item) ".";
+            color: var(--primary);
+            font-weight: 600;
+            margin-right: 0.75rem;
+            position: absolute;
+            left: -1.5rem;
         }
 
         .article-content blockquote {
             border-left: 4px solid var(--primary);
-            padding-left: 1.5rem;
+            padding: 1.5rem;
             margin: 2rem 0;
             font-style: italic;
             color: var(--gray);
+            background-color: rgba(37, 99, 235, 0.03);
+            border-radius: 0 var(--rounded-md) var(--rounded-md) 0;
+        }
+
+        .article-content blockquote cite {
+            display: block;
+            margin-top: 1rem;
+            font-style: normal;
+            font-weight: 600;
+            color: var(--dark);
         }
 
         .feature-box {
@@ -378,6 +433,35 @@
             color: var(--primary);
         }
 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            border-radius: var(--rounded-sm);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(37, 99, 235, 0.03);
+        }
+
+        tr:hover {
+            background-color: rgba(37, 99, 235, 0.05);
+        }
+
         .article-tags {
             display: flex;
             flex-wrap: wrap;
@@ -392,6 +476,12 @@
             font-size: 0.85rem;
             font-weight: 500;
             color: var(--dark);
+            transition: var(--transition);
+        }
+
+        .article-tag:hover {
+            background-color: var(--primary);
+            color: white;
         }
 
         .article-navigation {
@@ -414,6 +504,11 @@
 
         .nav-link-box:hover {
             background-color: rgba(37, 99, 235, 0.1);
+            transform: translateX(-5px);
+        }
+
+        .nav-link-box.next:hover {
+            transform: translateX(5px);
         }
 
         .nav-link-box i {
@@ -462,6 +557,11 @@
             height: 200px;
             width: 100%;
             object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .related-card:hover .related-card-image {
+            transform: scale(1.05);
         }
 
         .related-card-content {
@@ -486,6 +586,25 @@
             margin-bottom: 0.75rem;
             color: var(--dark);
             line-height: 1.3;
+        }
+
+        .blog-read-more {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .blog-read-more:hover {
+            color: var(--primary-dark);
+            transform: translateX(5px);
+        }
+
+        .blog-read-more i {
+            margin-left: 0.5rem;
+            transition: var(--transition);
+            font-size: 0.9rem;
         }
 
         /* Footer */
@@ -602,12 +721,14 @@
                 gap: 1.5rem;
                 box-shadow: var(--shadow);
                 transform: translateY(-150%);
-                transition: var(--transition);
+                transition: transform 0.4s ease, opacity 0.2s ease;
+                opacity: 0;
                 z-index: 999;
             }
             
             .nav-links.active {
                 transform: translateY(0);
+                opacity: 1;
             }
             
             .article-hero {
@@ -638,6 +759,10 @@
         }
 
         @media (max-width: 576px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
             .article-hero-title {
                 font-size: 2rem;
             }
@@ -663,6 +788,12 @@
             
             .article-content h3 {
                 font-size: 1.2rem;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
             }
         }
     </style>
@@ -738,56 +869,54 @@
             
             <p>Our kitchen tandem systems are engineered for durability and performance:</p>
             
-            <div style="overflow-x: auto;">
-                <table style="width: 100%; border-collapse: collapse; margin: 1.5rem 0;">
-                    <thead>
-                        <tr style="background-color: var(--primary); color: white;">
-                            <th style="padding: 0.75rem; text-align: left;">Model</th>
-                            <th style="padding: 0.75rem; text-align: left;">Height Options</th>
-                            <th style="padding: 0.75rem; text-align: left;">Weight Capacity</th>
-                            <th style="padding: 0.75rem; text-align: left;">Finish</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid var(--light-gray);">
-                            <td style="padding: 0.75rem;">MST- 12 Inch (300 mm)</td>
-                            <td style="padding: 0.75rem;">84mm, 116mm, 167mm</td>
-                            <td style="padding: 0.75rem;">40kg</td>
-                            <td style="padding: 0.75rem;">Zinc-plated Dark Grey</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid var(--light-gray);">
-                            <td style="padding: 0.75rem;">MST- 14 Inch (350 mm)</td>
-                            <td style="padding: 0.75rem;">84mm, 116mm, 167mm</td>
-                            <td style="padding: 0.75rem;">40kg</td>
-                            <td style="padding: 0.75rem;">Zinc-plated Dark Grey</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 0.75rem;">MST- 16 Inch (400 mm)</td>
-                            <td style="padding: 0.75rem;">84mm, 116mm, 167mm</td>
-                            <td style="padding: 0.75rem;">50kg</td>
-                            <td style="padding: 0.75rem;">Zinc-plated Dark Grey</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 0.75rem;">MST- 18 Inch (450 mm)</td>
-                            <td style="padding: 0.75rem;">84mm, 116mm, 167mm</td>
-                            <td style="padding: 0.75rem;">50kg</td>
-                            <td style="padding: 0.75rem;">Zinc-plated Dark Grey</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 0.75rem;">MST- 20 Inch (500 mm)</td>
-                            <td style="padding: 0.75rem;">84mm, 116mm, 167mm, 199mm</td>
-                            <td style="padding: 0.75rem;">50kg</td>
-                            <td style="padding: 0.75rem;">Zinc-plated Dark Grey</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 0.75rem;">MST- 22 Inch (550 mm)</td>
-                            <td style="padding: 0.75rem;">84mm, 116mm, 167mm, 199mm</td>
-                            <td style="padding: 0.75rem;">50kg</td>
-                            <td style="padding: 0.75rem;">Zinc-plated Dark Grey</td>
-                        </tr>                        
-                    </tbody>
-                </table>
-            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Height Options</th>
+                        <th>Weight Capacity</th>
+                        <th>Finish</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>MST- 12 Inch (300 mm)</td>
+                        <td>84mm, 116mm, 167mm</td>
+                        <td>40kg</td>
+                        <td>Zinc-plated Dark Grey</td>
+                    </tr>
+                    <tr>
+                        <td>MST- 14 Inch (350 mm)</td>
+                        <td>84mm, 116mm, 167mm</td>
+                        <td>40kg</td>
+                        <td>Zinc-plated Dark Grey</td>
+                    </tr>
+                    <tr>
+                        <td>MST- 16 Inch (400 mm)</td>
+                        <td>84mm, 116mm, 167mm</td>
+                        <td>50kg</td>
+                        <td>Zinc-plated Dark Grey</td>
+                    </tr>
+                    <tr>
+                        <td>MST- 18 Inch (450 mm)</td>
+                        <td>84mm, 116mm, 167mm</td>
+                        <td>50kg</td>
+                        <td>Zinc-plated Dark Grey</td>
+                    </tr>
+                    <tr>
+                        <td>MST- 20 Inch (500 mm)</td>
+                        <td>84mm, 116mm, 167mm, 199mm</td>
+                        <td>50kg</td>
+                        <td>Zinc-plated Dark Grey</td>
+                    </tr>
+                    <tr>
+                        <td>MST- 22 Inch (550 mm)</td>
+                        <td>84mm, 116mm, 167mm, 199mm</td>
+                        <td>50kg</td>
+                        <td>Zinc-plated Dark Grey</td>
+                    </tr>                        
+                </tbody>
+            </table>
             
             <h3>Installation Best Practices</h3>
             
@@ -842,11 +971,11 @@
             </div>
             
             <div class="article-tags">
-                <span class="article-tag">#KitchenHardware</span>
-                <span class="article-tag">#DrawerSystems</span>
-                <span class="article-tag">#TandemSlides</span>
-                <span class="article-tag">#KitchenDesign</span>
-                <span class="article-tag">#CabinetHardware</span>
+                <a href="blog.html?tag=KitchenHardware" class="article-tag">#KitchenHardware</a>
+                <a href="blog.html?tag=DrawerSystems" class="article-tag">#DrawerSystems</a>
+                <a href="blog.html?tag=TandemSlides" class="article-tag">#TandemSlides</a>
+                <a href="blog.html?tag=KitchenDesign" class="article-tag">#KitchenDesign</a>
+                <a href="blog.html?tag=CabinetHardware" class="article-tag">#CabinetHardware</a>
             </div>
             
             <div class="article-navigation">
@@ -858,7 +987,7 @@
                     </div>
                 </a>
                 
-                <a href="blog/kitchen-hardware-guide.html" class="nav-link-box" style="text-align: right; margin-left: auto;">
+                <a href="blog/kitchen-hardware-guide.html" class="nav-link-box next" style="text-align: right; margin-left: auto;">
                     <div class="nav-link-content">
                         <h4>Next Article</h4>
                         <h3>Choosing Cabinet Hardware</h3>
@@ -934,10 +1063,10 @@
                     <div class="footer-logo">Mex<span>is</span></div>
                     <p>Premium hardware solutions for modern furniture design.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 
@@ -989,6 +1118,18 @@
             navLinks.classList.toggle('active');
             mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
                 '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            mobileMenuBtn.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+        });
+        
+        // Close mobile menu when clicking on a nav link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
         });
         
         // Header Scroll Effect
@@ -1001,29 +1142,55 @@
             }
         });
         
-        // Smooth Scrolling for Anchor Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
+        // Smooth scrolling for anchor links (fallback for browsers that don't support CSS smooth scroll)
+        if (!('scrollBehavior' in document.documentElement.style)) {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
                     
-                    // Close mobile menu if open
-                    if (navLinks.classList.contains('active')) {
-                        navLinks.classList.remove('active');
-                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        if (navLinks.classList.contains('active')) {
+                            navLinks.classList.remove('active');
+                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                        }
                     }
-                }
+                });
             });
-        });
+        }
+        
+        // Image lazy loading fallback
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        } else {
+            // Fallback for browsers that don't support lazy loading
+            const lazyLoadObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        lazyLoadObserver.unobserve(img);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+                lazyLoadObserver.observe(img);
+            });
+        }
     </script>
 </body>
 </html>
