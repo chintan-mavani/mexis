@@ -630,6 +630,7 @@
             height: 500px;
             position: relative;
             margin-bottom: 5rem;
+            z-index: 1;
         }
 
         #interactive-map {
@@ -638,6 +639,7 @@
             border-radius: var(--rounded-lg);
             overflow: hidden;
             box-shadow: var(--shadow-lg);
+            margin-bottom: 2rem; 
         }
 
         /* Footer */
@@ -1100,8 +1102,9 @@
             <h2 class="section-title">Our Presence Across India</h2>
             <p class="text-center" style="max-width: 800px; margin: 0 auto 2rem;">We are proud to have a strong presence across various regions in India, serving clients with our premium hardware solutions.</p>
         </div>
-        
-        <div id="interactive-map"></div>
+        <div class="container" style="padding-bottom: 5rem;">
+            <div id="interactive-map">style="height: 500px;"></div>
+        </div>
     </section>
 
     <!-- Footer -->
