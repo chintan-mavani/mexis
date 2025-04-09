@@ -184,6 +184,7 @@
             backdrop-filter: blur(10px);
             box-shadow: var(--shadow-sm);
             transition: var(--transition);
+            padding: 0 2rem;
         }
 
         header.scrolled {
@@ -195,21 +196,108 @@
             justify-content: space-between;
             align-items: center;
             height: 80px;
+            max-width: 1280px;
+            margin: 0 auto;
         }
 
-        .logo {
-            font-size: 2rem;
-            font-weight: 700;
+        /* Logo Container */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            height: 100%;
+            cursor: pointer;
+            overflow: visible;
+        }
+
+        .logo-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 800;
+            font-family: 'Montserrat', sans-serif;
+            opacity: 0;
+            position: relative;
+            display: inline-block;
+        }
+
+        .mex {
             color: var(--primary);
+            animation: fadeIn 0.8s forwards 0.5s;
+        }
+
+        .is {
+            color: var(--secondary);
+            animation: fadeIn 0.8s forwards 0.7s;
+            margin-left: 2px;
+        }
+
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            left: 0;
+            top: 0;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--primary);
+            opacity: 0;
+        }
+
+        /* Logo Sparkle Animation */
+        .logo-sparkle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+            z-index: 10;
+            animation: sparkleFly 1s ease-out forwards;
+        }
+
+        @keyframes sparkleFly {
+            0% {
+                transform: translate(0, 0) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(var(--sparkle-tx), var(--sparkle-ty)) scale(0);
+                opacity: 0;
+            }
+        }
+
+        @keyframes sparkleTextForm {
+            0% {
+                transform: translate(var(--sparkle-start-x), var(--sparkle-start-y));
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(var(--sparkle-end-x), var(--sparkle-end-y));
+                opacity: 0;
+            }
+        }
+
+        /* Navigation */
+        nav {
             display: flex;
             align-items: center;
         }
 
-        .logo span {
-            color: var(--secondary);
-        }
-
-        /* Navigation */
         .nav-links {
             display: flex;
             gap: 2rem;
@@ -220,6 +308,7 @@
             font-weight: 500;
             color: var(--dark);
             padding: 0.5rem 0;
+            font-size: 1rem;
         }
 
         .nav-link::after {
@@ -233,7 +322,8 @@
             transition: var(--transition);
         }
 
-        .nav-link:hover::after {
+        .nav-link:hover::after,
+        .nav-link.active::after {
             width: 100%;
         }
 
@@ -726,6 +816,33 @@
             font-size: 0.875rem;
         }
 
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes particleFly {
+            0% { 
+                opacity: 1;
+                transform: translate(0, 0) scale(1);
+            }
+            100% { 
+                opacity: 0;
+                transform: translate(var(--tx), var(--ty)) scale(0.2);
+            }
+        }
+
         /* Responsive Styles */
         @media (max-width: 1024px) {
             .hero-title {
@@ -797,6 +914,10 @@
                 width: 100%;
                 max-width: 400px;
             }
+
+            .logo-text {
+                font-size: 1.5rem;
+            }
         }
 
         @media (max-width: 576px) {
@@ -821,10 +942,14 @@
 <body>
     <!-- Header -->
     <header id="header">
-        <div class="container header-container">
-            <a href="#" class="logo">
-                Mex<span>is</span>
-            </a>
+        <div class="header-container">
+            <div class="logo-container" id="logoContainer">
+                <a href="/" class="logo-link">
+                    <div class="logo-text mex">Mex</div>
+                    <div class="logo-text is">is</div>
+                    <div class="particles" id="particles"></div>
+                </a>
+            </div>
             
             <nav>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -1261,6 +1386,142 @@
             });
         }
         
+        // Create particles for logo animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 15;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random position near logo
+                const posX = 50 + (Math.random() - 0.5) * 40;
+                const posY = 15 + (Math.random() - 0.5) * 20;
+                
+                // Random target position (flying outwards)
+                const angle = Math.random() * Math.PI * 2;
+                const distance = 30 + Math.random() * 50;
+                const targetX = Math.cos(angle) * distance;
+                const targetY = Math.sin(angle) * distance;
+                
+                particle.style.left = `${posX}px`;
+                particle.style.top = `${posY}px`;
+                particle.style.setProperty('--tx', `${targetX}px`);
+                particle.style.setProperty('--ty', `${targetY}px`);
+                
+                // Random delay and color
+                const delay = 0.5 + Math.random() * 0.5;
+                particle.style.animation = `particleFly 0.8s forwards ${delay}s`;
+                particle.style.background = i % 2 === 0 ? 'var(--primary)' : 'var(--secondary)';
+                particle.style.width = `${3 + Math.random() * 3}px`;
+                particle.style.height = particle.style.width;
+                
+                particlesContainer.appendChild(particle);
+            }
+        });
+
+        // Logo Click Animation
+        const logoContainer = document.getElementById('logoContainer');
+        
+        logoContainer.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Create sparkle particles
+            createLogoSparkle();
+            
+            // Navigate to home after animation
+            setTimeout(() => {
+                window.location.href = '/';
+            }, 1000);
+        });
+
+        function createLogoSparkle() {
+            // Clear any existing particles
+            document.querySelectorAll('.logo-sparkle').forEach(p => p.remove());
+            
+            const logoRect = logoContainer.getBoundingClientRect();
+            const centerX = logoRect.left + logoRect.width / 2;
+            const centerY = logoRect.top + logoRect.height / 2;
+            
+            // Create particles that form the text
+            const textParticles = [
+                // M
+                {x: -40, y: -30}, {x: -40, y: -20}, {x: -40, y: -10}, {x: -40, y: 0}, {x: -40, y: 10},
+                {x: -30, y: -30}, {x: -20, y: -20}, {x: -10, y: -10}, {x: 0, y: 0},
+                {x: 10, y: -10}, {x: 20, y: -20}, {x: 30, y: -30},
+                {x: 40, y: -30}, {x: 40, y: -20}, {x: 40, y: -10}, {x: 40, y: 0}, {x: 40, y: 10},
+                
+                // E
+                {x: -40, y: 20}, {x: -40, y: 30}, {x: -40, y: 40}, {x: -40, y: 50}, {x: -40, y: 60},
+                {x: -30, y: 20}, {x: -20, y: 20}, {x: -10, y: 20}, {x: 0, y: 20},
+                {x: -30, y: 40}, {x: -20, y: 40}, {x: -10, y: 40},
+                {x: -30, y: 60}, {x: -20, y: 60}, {x: -10, y: 60}, {x: 0, y: 60},
+                
+                // X
+                {x: 10, y: 20}, {x: 20, y: 30}, {x: 30, y: 40}, {x: 40, y: 50}, {x: 50, y: 60},
+                {x: 50, y: 20}, {x: 40, y: 30}, {x: 30, y: 40}, {x: 20, y: 50}, {x: 10, y: 60},
+                
+                // I
+                {x: 70, y: 20}, {x: 70, y: 30}, {x: 70, y: 40}, {x: 70, y: 50}, {x: 70, y: 60},
+                
+                // S
+                {x: 80, y: 20}, {x: 90, y: 20}, {x: 100, y: 20}, {x: 110, y: 20},
+                {x: 80, y: 40}, {x: 90, y: 40}, {x: 100, y: 40},
+                {x: 80, y: 60}, {x: 90, y: 60}, {x: 100, y: 60}, {x: 110, y: 60},
+                {x: 80, y: 30}, {x: 110, y: 50}
+            ];
+            
+            // Create particles that fly out from center
+            for (let i = 0; i < 30; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.classList.add('logo-sparkle');
+                
+                // Random position around center
+                const angle = Math.random() * Math.PI * 2;
+                const distance = 5 + Math.random() * 10;
+                const startX = Math.cos(angle) * distance;
+                const startY = Math.sin(angle) * distance;
+                
+                // Random target position (flying outwards)
+                const targetAngle = Math.random() * Math.PI * 2;
+                const targetDistance = 50 + Math.random() * 100;
+                const targetX = Math.cos(targetAngle) * targetDistance;
+                const targetY = Math.sin(targetAngle) * targetDistance;
+                
+                sparkle.style.left = `${centerX}px`;
+                sparkle.style.top = `${centerY}px`;
+                sparkle.style.setProperty('--sparkle-tx', `${targetX}px`);
+                sparkle.style.setProperty('--sparkle-ty', `${targetY}px`);
+                sparkle.style.background = i % 2 === 0 ? 'var(--primary)' : 'var(--secondary)';
+                
+                document.body.appendChild(sparkle);
+            }
+            
+            // Create particles that form the text
+            textParticles.forEach((pos, index) => {
+                const sparkle = document.createElement('div');
+                sparkle.classList.add('logo-sparkle');
+                
+                // Start from random position around center
+                const startAngle = Math.random() * Math.PI * 2;
+                const startDistance = 100 + Math.random() * 50;
+                const startX = Math.cos(startAngle) * startDistance;
+                const startY = Math.sin(startAngle) * startDistance;
+                
+                sparkle.style.left = `${centerX}px`;
+                sparkle.style.top = `${centerY}px`;
+                sparkle.style.setProperty('--sparkle-start-x', `${startX}px`);
+                sparkle.style.setProperty('--sparkle-start-y', `${startY}px`);
+                sparkle.style.setProperty('--sparkle-end-x', `${pos.x}px`);
+                sparkle.style.setProperty('--sparkle-end-y', `${pos.y}px`);
+                sparkle.style.animation = `sparkleTextForm 1s ease-out forwards ${index * 0.02}s`;
+                sparkle.style.background = index % 2 === 0 ? 'var(--primary)' : 'var(--secondary)';
+                
+                document.body.appendChild(sparkle);
+            });
+        }
+
         // Smooth Scrolling for Anchor Links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
