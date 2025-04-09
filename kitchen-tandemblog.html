@@ -73,10 +73,6 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             font-family: 'Poppins', sans-serif;
             color: var(--dark);
@@ -160,6 +156,18 @@
             box-shadow: var(--shadow-md);
         }
 
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
         /* Header */
         header {
             position: fixed;
@@ -185,7 +193,7 @@
         }
 
         .logo {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 700;
             color: var(--primary);
             display: flex;
@@ -235,7 +243,6 @@
             color: var(--dark);
             font-size: 1.5rem;
             cursor: pointer;
-            transition: var(--transition);
         }
 
         /* Article Hero */
@@ -268,7 +275,7 @@
         }
 
         .article-hero-title {
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin-bottom: 1.5rem;
             color: var(--dark);
             line-height: 1.2;
@@ -293,9 +300,6 @@
         .article-date {
             color: var(--gray);
             font-size: 0.95rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
         }
 
         /* Article Content */
@@ -312,11 +316,6 @@
             border-radius: var(--rounded-lg);
             margin: 3rem 0;
             box-shadow: var(--shadow-lg);
-            transition: transform 0.3s ease;
-        }
-
-        .article-image:hover {
-            transform: scale(1.01);
         }
 
         .article-content {
@@ -333,18 +332,6 @@
             font-size: 1.8rem;
             margin: 3rem 0 1.5rem;
             color: var(--primary-dark);
-            position: relative;
-            padding-bottom: 0.5rem;
-        }
-
-        .article-content h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background-color: var(--secondary);
         }
 
         .article-content h3 {
@@ -360,56 +347,14 @@
 
         .article-content li {
             margin-bottom: 0.75rem;
-            position: relative;
-        }
-
-        .article-content ul li::before {
-            content: '';
-            display: inline-block;
-            width: 8px;
-            height: 8px;
-            background-color: var(--primary);
-            border-radius: 50%;
-            margin-right: 0.75rem;
-            position: absolute;
-            left: -1.5rem;
-            top: 0.6rem;
-        }
-
-        .article-content ol {
-            counter-reset: item;
-            list-style: none;
-        }
-
-        .article-content ol li {
-            counter-increment: item;
-        }
-
-        .article-content ol li::before {
-            content: counter(item) ".";
-            color: var(--primary);
-            font-weight: 600;
-            margin-right: 0.75rem;
-            position: absolute;
-            left: -1.5rem;
         }
 
         .article-content blockquote {
             border-left: 4px solid var(--primary);
-            padding: 1.5rem;
+            padding-left: 1.5rem;
             margin: 2rem 0;
             font-style: italic;
             color: var(--gray);
-            background-color: rgba(37, 99, 235, 0.03);
-            border-radius: 0 var(--rounded-md) var(--rounded-md) 0;
-        }
-
-        .article-content blockquote cite {
-            display: block;
-            margin-top: 1rem;
-            font-style: normal;
-            font-weight: 600;
-            color: var(--dark);
         }
 
         .feature-box {
@@ -433,35 +378,6 @@
             color: var(--primary);
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1.5rem 0;
-            box-shadow: var(--shadow-sm);
-            overflow: hidden;
-            border-radius: var(--rounded-sm);
-        }
-
-        th, td {
-            padding: 0.75rem;
-            text-align: left;
-            border-bottom: 1px solid var(--light-gray);
-        }
-
-        th {
-            background-color: var(--primary);
-            color: white;
-            font-weight: 600;
-        }
-
-        tr:nth-child(even) {
-            background-color: rgba(37, 99, 235, 0.03);
-        }
-
-        tr:hover {
-            background-color: rgba(37, 99, 235, 0.05);
-        }
-
         .article-tags {
             display: flex;
             flex-wrap: wrap;
@@ -476,12 +392,6 @@
             font-size: 0.85rem;
             font-weight: 500;
             color: var(--dark);
-            transition: var(--transition);
-        }
-
-        .article-tag:hover {
-            background-color: var(--primary);
-            color: white;
         }
 
         .article-navigation {
@@ -504,11 +414,6 @@
 
         .nav-link-box:hover {
             background-color: rgba(37, 99, 235, 0.1);
-            transform: translateX(-5px);
-        }
-
-        .nav-link-box.next:hover {
-            transform: translateX(5px);
         }
 
         .nav-link-box i {
@@ -557,11 +462,6 @@
             height: 200px;
             width: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .related-card:hover .related-card-image {
-            transform: scale(1.05);
         }
 
         .related-card-content {
@@ -586,25 +486,6 @@
             margin-bottom: 0.75rem;
             color: var(--dark);
             line-height: 1.3;
-        }
-
-        .blog-read-more {
-            display: inline-flex;
-            align-items: center;
-            color: var(--primary);
-            font-weight: 600;
-            transition: var(--transition);
-        }
-
-        .blog-read-more:hover {
-            color: var(--primary-dark);
-            transform: translateX(5px);
-        }
-
-        .blog-read-more i {
-            margin-left: 0.5rem;
-            transition: var(--transition);
-            font-size: 0.9rem;
         }
 
         /* Footer */
@@ -721,14 +602,12 @@
                 gap: 1.5rem;
                 box-shadow: var(--shadow);
                 transform: translateY(-150%);
-                transition: transform 0.4s ease, opacity 0.2s ease;
-                opacity: 0;
+                transition: var(--transition);
                 z-index: 999;
             }
             
             .nav-links.active {
                 transform: translateY(0);
-                opacity: 1;
             }
             
             .article-hero {
@@ -759,10 +638,6 @@
         }
 
         @media (max-width: 576px) {
-            .logo {
-                font-size: 2rem;
-            }
-            
             .article-hero-title {
                 font-size: 2rem;
             }
@@ -788,12 +663,6 @@
             
             .article-content h3 {
                 font-size: 1.2rem;
-            }
-            
-            table {
-                display: block;
-                overflow-x: auto;
-                white-space: nowrap;
             }
         }
     </style>
@@ -843,7 +712,7 @@
         <article class="article-content">
             <p class="lead">Modern kitchens demand storage solutions that combine functionality with elegance. Mexis tandem drawer systems provide the perfect balance of silent operation, smooth movement, and space optimization to transform your kitchen experience.</p>
             
-            <img src="blog 1 kitchen.avif" 
+            <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
                  alt="Modern kitchen with tandem drawer system" 
                  class="article-image"
                  loading="lazy">
@@ -930,7 +799,7 @@
                 <li><strong>Test movement</strong> - Check for smooth operation before finalizing installation</li>
             </ol>
             
-            <img src="blog 1 instalation.avif"
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" 
                  alt="Detailed view of tandem drawer system installation" 
                  class="article-image"
                  loading="lazy">
@@ -971,11 +840,11 @@
             </div>
             
             <div class="article-tags">
-                <a href="blog.html?tag=KitchenHardware" class="article-tag">#KitchenHardware</a>
-                <a href="blog.html?tag=DrawerSystems" class="article-tag">#DrawerSystems</a>
-                <a href="blog.html?tag=TandemSlides" class="article-tag">#TandemSlides</a>
-                <a href="blog.html?tag=KitchenDesign" class="article-tag">#KitchenDesign</a>
-                <a href="blog.html?tag=CabinetHardware" class="article-tag">#CabinetHardware</a>
+                <span class="article-tag">#KitchenHardware</span>
+                <span class="article-tag">#DrawerSystems</span>
+                <span class="article-tag">#TandemSlides</span>
+                <span class="article-tag">#KitchenDesign</span>
+                <span class="article-tag">#CabinetHardware</span>
             </div>
             
             <div class="article-navigation">
@@ -987,7 +856,7 @@
                     </div>
                 </a>
                 
-                <a href="blog/kitchen-hardware-guide.html" class="nav-link-box next" style="text-align: right; margin-left: auto;">
+                <a href="blog/kitchen-hardware-guide.html" class="nav-link-box" style="text-align: right; margin-left: auto;">
                     <div class="nav-link-content">
                         <h4>Next Article</h4>
                         <h3>Choosing Cabinet Hardware</h3>
@@ -1006,7 +875,7 @@
             <div class="related-grid">
                 <!-- Related Article 1 -->
                 <article class="related-card">
-                    <img src="article 1.avif" 
+                    <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                          alt="Aluminum profiles in furniture" 
                          class="related-card-image" 
                          loading="lazy">
@@ -1022,7 +891,7 @@
                 
                 <!-- Related Article 2 -->
                 <article class="related-card">
-                    <img src="article 2.avif" 
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                          alt="Sliding door installation" 
                          class="related-card-image" 
                          loading="lazy">
@@ -1038,7 +907,7 @@
                 
                 <!-- Related Article 3 -->
                 <article class="related-card">
-                    <img src="article 3.avif"
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                          alt="Kitchen cabinet hardware" 
                          class="related-card-image" 
                          loading="lazy">
@@ -1063,10 +932,10 @@
                     <div class="footer-logo">Mex<span>is</span></div>
                     <p>Premium hardware solutions for modern furniture design.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 
@@ -1118,18 +987,6 @@
             navLinks.classList.toggle('active');
             mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
                 '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-            mobileMenuBtn.setAttribute('aria-expanded', navLinks.classList.contains('active'));
-        });
-        
-        // Close mobile menu when clicking on a nav link
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
-                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                }
-            });
         });
         
         // Header Scroll Effect
@@ -1142,55 +999,29 @@
             }
         });
         
-        // Smooth scrolling for anchor links (fallback for browsers that don't support CSS smooth scroll)
-        if (!('scrollBehavior' in document.documentElement.style)) {
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
                     
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
-                    
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                        
-                        // Close mobile menu if open
-                        if (navLinks.classList.contains('active')) {
-                            navLinks.classList.remove('active');
-                            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                            mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                        }
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
                     }
-                });
+                }
             });
-        }
-        
-        // Image lazy loading fallback
-        if ('loading' in HTMLImageElement.prototype) {
-            const images = document.querySelectorAll('img[loading="lazy"]');
-            images.forEach(img => {
-                img.src = img.dataset.src;
-            });
-        } else {
-            // Fallback for browsers that don't support lazy loading
-            const lazyLoadObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        lazyLoadObserver.unobserve(img);
-                    }
-                });
-            });
-            
-            document.querySelectorAll('img[loading="lazy"]').forEach(img => {
-                lazyLoadObserver.observe(img);
-            });
-        }
+        });
     </script>
 </body>
 </html>
