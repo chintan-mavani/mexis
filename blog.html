@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Tags -->
+    <title>Mexis Blog - Furniture Hardware Insights & Solutions | Kitchen & Wardrobe Systems</title>
+    <meta name="description" content="Expert articles on tandem systems, aluminum profiles, and wardrobe hardware from India's leading furniture hardware manufacturer.">
+    <meta name="keywords" content="furniture hardware blog, kitchen tandem systems, wardrobe solutions, aluminum profiles, installation guides, furniture design trends">
+    <link rel="canonical" href="https://www.mexis.in/blog" />
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Mexis Blog - Furniture Hardware Insights & Solutions">
+    <meta property="og:description" content="Expert articles on tandem systems, aluminum profiles, and wardrobe hardware from India's leading furniture hardware manufacturer.">
+    <meta property="og:image" content="https://www.mexis.in/blog-preview.jpg">
+    <meta property="og:url" content="https://www.mexis.in/blog">
+    <meta property="og:type" content="website">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Mexis Blog",
+            "description": "Expert articles on furniture hardware solutions from India's leading manufacturer",
+            "url": "https://www.mexis.in/blog",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Mexis",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.mexis.in/logo.png"
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --success: #10b981;
+            --error: #ef4444;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --rounded-sm: 0.25rem;
+            --rounded: 0.5rem;
+            --rounded-md: 0.75rem;
+            --rounded-lg: 1rem;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            color: var(--dark);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.75rem;
+            border-radius: var(--rounded);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            outline: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            box-shadow: var(--shadow);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            color: var(--dark);
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link.active {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--dark);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Blog Hero Section */
+        .blog-hero {
+            height: 60vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
+            opacity: 0.3;
+        }
+
+        .blog-hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .blog-hero-title {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            line-height: 1.2;
+        }
+
+        .blog-hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Blog Content */
+        .blog-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .blog-categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin: 2rem 0 3rem;
+        }
+
+        .blog-category {
+            padding: 0.6rem 1.4rem;
+            border-radius: 2rem;
+            background: var(--light-gray);
+            color: var(--dark);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .blog-category:hover, .blog-category.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: var(--rounded-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .blog-card-image {
+            height: 220px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .blog-card-content {
+            padding: 1.8rem;
+        }
+
+        .blog-card-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-card-category {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .blog-card-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+            line-height: 1.3;
+        }
+
+        .blog-card-excerpt {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .blog-card-features {
+            margin: 1.8rem 0;
+        }
+
+        .blog-feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        .blog-feature-icon {
+            color: var(--primary);
+            margin-right: 0.8rem;
+            font-size: 1rem;
+        }
+
+        .blog-read-more {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .blog-read-more:hover {
+            color: var(--primary-dark);
+            transform: translateX(5px);
+        }
+
+        .blog-read-more i {
+            margin-left: 0.5rem;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-logo span {
+            color: var(--secondary);
+        }
+
+        .footer-about p {
+            color: var(--light-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--light-gray);
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--light-gray);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .blog-hero-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                gap: 1.5rem;
+                box-shadow: var(--shadow);
+                transform: translateY(-150%);
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            
+            .blog-hero {
+                height: auto;
+                padding: 120px 0 80px;
+            }
+            
+            .blog-hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .blog-hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .blog-card-title {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .blog-hero-title {
+                font-size: 2rem;
+            }
+            
+            .blog-hero-subtitle {
+                font-size: 0.9rem;
+            }
+            
+            .blog-categories {
+                gap: 0.5rem;
+            }
+            
+            .blog-category {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                Mex<span>is</span>
+            </a>
+            
+            <nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="products.html" class="nav-link">Products</a>
+                    <a href="blog.html" class="nav-link active">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+        <!-- Floating background elements -->
+        <div class="floating-element" style="width: 300px; height: 300px; top: 10%; left: 5%;"></div>
+        <div class="floating-element" style="width: 200px; height: 200px; bottom: 10%; right: 15%;"></div>
+        <div class="floating-element" style="width: 150px; height: 150px; top: 20%; right: 10%;"></div>
+        
+        <div class="container">
+            <div class="blog-hero-content">
+                <h1 class="blog-hero-title animate__animated animate__fadeInDown">Mexis Hardware Insights</h1>
+                <p class="blog-hero-subtitle animate__animated animate__fadeInUp">Expert articles on furniture hardware solutions, installation guides, and design trends from India's leading manufacturer</p>
+                <div class="animate__animated animate__fadeInUp animate__delay-1s">
+                    <a href="#featured-articles" class="btn btn-primary">Explore Articles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-container" id="featured-articles">
+        <h2 class="section-title">Latest Articles</h2>
+        
+        <div class="blog-categories">
+            <button class="blog-category active">All Articles</button>
+            <button class="blog-category">Kitchen Solutions</button>
+            <button class="blog-category">Wardrobe Systems</button>
+            <button class="blog-category">Aluminum Profiles</button>
+            <button class="blog-category">Installation Guides</button>
+        </div>
+        
+        <div class="blog-grid">
+            <!-- Article 1 -->
+            <article class="blog-card animate__animated animate__fadeIn">
+                <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                     alt="Modern kitchen with tandem drawer system" 
+                     class="blog-card-image" 
+                     loading="lazy">
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span class="blog-card-category">Kitchen Solutions</span>
+                        <span>June 15, 2023</span>
+                    </div>
+                    <h2 class="blog-card-title">Smart Kitchen Storage with Tandem Systems</h2>
+                    <p class="blog-card-excerpt">Discover how our soft-close tandem systems are revolutionizing kitchen storage with silent operation and space optimization.</p>
+                    
+                    <div class="blog-card-features">
+                        <div class="blog-feature-item">
+                            <span class="blog-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>100% extension for complete access</span>
+                        </div>
+                        <div class="blog-feature-item">
+                            <span class="blog-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Supports up to 50kg per drawer</span>
+                        </div>
+                    </div>
+                    
+                    <a href="blog/tandem-systems-kitchen.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+            
+            <!-- Article 2 -->
+            <article class="blog-card animate__animated animate__fadeIn">
+                <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                     alt="Aluminum profiles in furniture" 
+                     class="blog-card-image" 
+                     loading="lazy">
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span class="blog-card-category">Aluminum Profiles</span>
+                        <span>July 18, 2023</span>
+                    </div>
+                    <h2 class="blog-card-title">Durable Furniture with Aluminum Profiles</h2>
+                    <p class="blog-card-excerpt">Why designers choose our aluminum profiles for modern, lightweight and corrosion-resistant furniture edges.</p>
+                    
+                    <div class="blog-card-features">
+                        <div class="blog-feature-item">
+                            <span class="blog-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Lasts 3x longer than steel</span>
+                        </div>
+                        <div class="blog-feature-item">
+                            <span class="blog-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Available in 12+ colors</span>
+                        </div>
+                    </div>
+                    
+                    <a href="blog/aluminum-profiles.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+            
+            <!-- Article 3 -->
+            <article class="blog-card animate__animated animate__fadeIn">
+                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                     alt="Sliding door installation" 
+                     class="blog-card-image" 
+                     loading="lazy">
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span class="blog-card-category">Installation Guide</span>
+                        <span>August 5, 2023</span>
+                    </div>
+                    <h2 class="blog-card-title">Installing Sliding Door Systems</h2>
+                    <p class="blog-card-excerpt">Professional techniques for installing our premium sliding door hardware with perfect alignment.</p>
+                    
+                    <div class="blog-card-features">
+                        <div class="blog-feature-item">
+                            <span class="blog-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Step-by-step instructions</span>
+                        </div>
+                        <div class="blog-feature-item">
+                            <span class="blog-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Troubleshooting tips</span>
+                        </div>
+                    </div>
+                    
+                    <a href="blog/sliding-door-installation.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+            
+            <!-- Article 4 -->
+            <article class="blog-card animate__animated animate__fadeIn">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                     alt="Kitchen cabinet hardware" 
+                     class="blog-card-image" 
+                     loading="lazy">
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span class="blog-card-category">Kitchen Solutions</span>
+                        <span>August 22, 2023</span>
+                    </div>
+                    <h2 class="blog-card-title">Choosing Cabinet Hardware</h2>
+                    <p class="blog-card-excerpt">Select handles, hinges and drawer slides that complement your kitchen design aesthetic.</p>
+                    
+                    <div class="blog-card-features">
+                        <div class="blog-feature-item">
+                            <span class="blog-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Style matching guide</span>
+                        </div>
+                        <div class="blog-feature-item">
+                            <span class="blog-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Durability considerations</span>
+                        </div>
+                    </div>
+                    
+                    <a href="blog/kitchen-hardware-guide.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+            
+            <!-- Article 5 -->
+            <article class="blog-card animate__animated animate__fadeIn">
+                <img src="https://images.unsplash.com/photo-1583845112203-29329902330b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                     alt="Wardrobe organization system" 
+                     class="blog-card-image" 
+                     loading="lazy">
+                <div class="blog-card-content">
+                    <div class="blog-card-meta">
+                        <span class="blog-card-category">Wardrobe Systems</span>
+                        <span>September 10, 2023</span>
+                    </div>
+                    <h2 class="blog-card-title">Maximizing Wardrobe Space</h2>
+                    <p class="blog-card-excerpt">Professional tips for creating custom storage solutions with adjustable shelves and pull-out racks.</p>
+                    
+                    <div class="blog-card-features">
+                        <div class="blog-feature-item">
+                            <span class="blog-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Space-saving techniques</span>
+                        </div>
+                        <div class="blog-feature-item">
+                            <span class="blog-feature-icon"><i class="fas fa-check-circle"></i></span>
+                            <span>Custom configuration ideas</span>
+                        </div>
+                    </div>
+                    
+                    <a href="blog/wardrobe-organization.html" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Mex<span>is</span></div>
+                    <p>Premium hardware solutions for modern furniture design.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Blog Categories</h3>
+                    <ul>
+                        <li><a href="blog.html?category=kitchen">Kitchen Solutions</a></li>
+                        <li><a href="blog.html?category=wardrobe">Wardrobe Systems</a></li>
+                        <li><a href="blog.html?category=profiles">Aluminum Profiles</a></li>
+                        <li><a href="blog.html?category=installation">Installation Guides</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="installation-guides.html">Installation Guides</a></li>
+                        <li><a href="product-catalog.pdf">Product Catalog</a></li>
+                        <li><a href="blog.html">All Articles</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Mexis by Ayan Enterprise. All Rights Reserved. Designed with <i class="fas fa-heart" style="color: var(--error);"></i> in India</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Blog category filtering
+        const categories = document.querySelectorAll('.blog-category');
+        categories.forEach(category => {
+            category.addEventListener('click', () => {
+                categories.forEach(c => c.classList.remove('active'));
+                category.classList.add('active');
+                // In a real implementation, you would filter articles here
+                console.log(`Filtering by: ${category.textContent}`);
+            });
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
