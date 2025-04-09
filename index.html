@@ -429,35 +429,6 @@
             opacity: 1;
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .reel-section {
-                padding: 60px 0;
-            }
-            
-            .reel-section h2 {
-                font-size: 2.2rem;
-            }
-            
-            .reel-container {
-                gap: 20px;
-                padding: 20px;
-            }
-            
-            .reel-item {
-                min-width: 250px;
-                width: 250px;
-                height: 450px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .reel-item {
-                min-width: 220px;
-                width: 220px;
-                height: 400px;
-            }
-        }
         /* Products Section */
         .products {
             background-color: white;
@@ -627,19 +598,27 @@
 
         /* Map Section */
         .map-section {
-            height: 500px;
+            height: auto;
             position: relative;
-            margin-bottom: 5rem;
+            padding: 5rem 0 3rem;
             z-index: 1;
+            background-color: white;
         }
 
-        #interactive-map {
-            height: 100%;
+        #static-map {
+            height: 500px;
             width: 100%;
             border-radius: var(--rounded-lg);
             overflow: hidden;
             box-shadow: var(--shadow-lg);
-            margin-bottom: 2rem; 
+            pointer-events: none;
+        }
+
+        .map-note {
+            text-align: center;
+            margin-top: 1rem;
+            color: var(--gray);
+            font-size: 0.9rem;
         }
 
         /* Footer */
@@ -1102,7 +1081,8 @@
             <h2 class="section-title">Our Presence Across India</h2>
             <p class="text-center" style="max-width: 800px; margin: 0 auto 2rem;">We are proud to have a strong presence across various regions in India, serving clients with our premium hardware solutions.</p>
         </div>
-        <div id="interactive-map"></div>
+        <div id="static-map"></div>
+        <p class="map-note">Locations shown are representative of our presence across India</p>
     </section>
 
     <!-- Footer -->
@@ -1216,23 +1196,21 @@
             });
         });
         
-        // Initialize Map - Focused on India with boundaries
-        const map = L.map('interactive-map', {
-            maxBounds: [
-                [6.0, 68.0], // Southwest coordinates
-                [36.0, 98.0]  // Northeast coordinates
-            ],
-            maxBoundsViscosity: 1.0 // Strict bounds
+        // Initialize Static Map - Focused on India
+        const map = L.map('static-map', {
+            zoomControl: false,
+            dragging: false,
+            touchZoom: false,
+            scrollWheelZoom: false,
+            doubleClickZoom: false,
+            boxZoom: false,
+            keyboard: false
         }).setView([20.5937, 78.9629], 5);
-        
-        // Restrict zoom level to keep focus on India
-        map.setMinZoom(4);
-        map.setMaxZoom(7);
-        
+
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
-        
+
         // Add markers for locations
         const locations = [
             { name: "Indore", coords: [22.7196, 75.8577], info: "10+ stores" },
@@ -1288,5 +1266,3 @@
     </script>
 </body>
 </html>
-
-
