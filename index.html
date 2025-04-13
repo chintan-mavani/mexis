@@ -729,7 +729,11 @@
             box-shadow: var(--shadow-lg);
             transition: all 0.3s ease;
         }
-
+        
+        .chatbot-toggle.hidden {
+            display: none;
+        }
+        
         .chatbot-toggle:hover {
             background-color: var(--primary-dark);
             transform: scale(1.1);
@@ -1466,11 +1470,13 @@
         // Toggle chatbot window
         chatbotToggle.addEventListener('click', () => {
             chatbotWindow.classList.toggle('active');
+            chatbotToggle.classList.toggle('hidden');
         });
 
         // Close chatbot window
         chatbotClose.addEventListener('click', () => {
             chatbotWindow.classList.remove('active');
+            chatbotToggle.classList.remove('hidden');
         });
 
         // Send message function
