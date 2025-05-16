@@ -180,8 +180,6 @@
             font-size: 3rem;
             font-weight: 700;
             color: var(--primary);
-            display: flex;
-            align-items: center;
         }
 
         .logo span {
@@ -256,70 +254,14 @@
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
+            margin-bottom: 1.5rem;
         }
         
-        .brand-meaning {
-            display: inline-block;
-            background: rgba(37, 99, 235, 0.1);
-            border-left: 4px solid var(--primary);
-            padding: 0.5rem 1.5rem;
-            border-radius: 0 50px 50px 0;
-            margin: 1.5rem 0;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 1024px) {
-            .hero-title {
-                font-size: 3rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .nav-links {
-                position: fixed;
-                top: 80px;
-                left: 0;
-                width: 100%;
-                background-color: white;
-                flex-direction: column;
-                align-items: center;
-                padding: 2rem 0;
-                gap: 1.5rem;
-                box-shadow: var(--shadow);
-                transform: translateY(-150%);
-                transition: var(--transition);
-                z-index: 999;
-            }
-            
-            .nav-links.active {
-                transform: translateY(0);
-            }
-            
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero-title {
-                font-size: 2rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-            
-            .section {
-                padding: 3rem 0;
-            }
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+            max-width: 600px;
         }
 
         /* Stats Section */
@@ -697,8 +639,6 @@
             font-weight: 700;
             color: var(--primary);
             margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
         }
 
         .footer-logo span {
@@ -837,11 +777,6 @@
                 transform: translateY(0);
             }
             
-            .hero {
-                height: auto;
-                padding: 6rem 0;
-            }
-            
             .hero-title {
                 font-size: 2.5rem;
             }
@@ -912,19 +847,9 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="hero-title animate__animated animate__fadeInDown mb-4">The Mexis Story</h1>
-                    <p class="lead animate__animated animate__fadeInUp">Founded in 2021 in Surat, Gujarat, Mexis is proudly Indian-made, delivering premium hardware solutions across 25+ cities nationwide.</p>
-                    <a href="#timeline" class="btn btn-primary btn-lg px-4 animate__animated animate__fadeInUp animate__delay-1s">Explore Our Journey</a>
-                </div>
-                <div class="col-lg-6 animate__animated animate__fadeIn">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                         alt="Mexis team working" 
-                         class="img-fluid rounded-3 shadow-lg" 
-                         loading="lazy">
-                </div>
-            </div>
+            <h1 class="hero-title animate__animated animate__fadeInDown">The Mexis Story</h1>
+            <p class="hero-subtitle animate__animated animate__fadeInUp">Founded in 2021 in Surat, Gujarat, Mexis is proudly Indian-made, delivering premium hardware solutions across 25+ cities nationwide.</p>
+            <a href="#timeline" class="btn btn-primary animate__animated animate__fadeInUp animate__delay-1s">Explore Our Journey</a>
         </div>
     </section>
 
