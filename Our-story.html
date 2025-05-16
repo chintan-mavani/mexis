@@ -230,59 +230,96 @@
         }
 
         /* Hero Section */
-        .hero {
-            height: 70vh;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+        .hero-section {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(245, 158, 11, 0.08) 100%);
+            padding: 140px 0 100px;
             position: relative;
             overflow: hidden;
             margin-top: 80px;
         }
-
-        .hero::before {
+        
+        .hero-section::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
             opacity: 0.5;
         }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 100%;
-            text-align: center;
-        }
-
+        
         .hero-title {
             font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
             line-height: 1.2;
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
-
-        .hero-subtitle {
-            font-size: 1.25rem;
-            color: var(--gray);
-            margin-bottom: 2rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+        
+        .brand-meaning {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.1);
+            border-left: 4px solid var(--primary);
+            padding: 0.5rem 1.5rem;
+            border-radius: 0 50px 50px 0;
+            margin: 1.5rem 0;
         }
 
-        .hero-image {
-            border-radius: var(--rounded-lg);
-            box-shadow: var(--shadow-lg);
-            margin-top: 2rem;
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                gap: 1.5rem;
+                box-shadow: var(--shadow);
+                transform: translateY(-150%);
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
         }
 
         /* Stats Section */
@@ -873,15 +910,20 @@
     </header>
     
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero-section">
         <div class="container">
-            <div class="hero-content animate__animated animate__fadeIn">
-                <h1 class="hero-title">The Mexis Story</h1>
-                <p class="hero-subtitle">Founded in 2021 in Surat, Gujarat, Mexis is proudly Indian-made, delivering premium hardware solutions across 25+ cities nationwide.</p>
-                <a href="#timeline" class="btn btn-primary">Explore Our Journey</a>
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                     alt="Mexis team working" 
-                     class="hero-image animate__animated animate__fadeInUp animate__delay-1s">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title animate__animated animate__fadeInDown mb-4">The Mexis Story</h1>
+                    <p class="lead animate__animated animate__fadeInUp">Founded in 2021 in Surat, Gujarat, Mexis is proudly Indian-made, delivering premium hardware solutions across 25+ cities nationwide.</p>
+                    <a href="#timeline" class="btn btn-primary btn-lg px-4 animate__animated animate__fadeInUp animate__delay-1s">Explore Our Journey</a>
+                </div>
+                <div class="col-lg-6 animate__animated animate__fadeIn">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         alt="Mexis team working" 
+                         class="img-fluid rounded-3 shadow-lg" 
+                         loading="lazy">
+                </div>
             </div>
         </div>
     </section>
