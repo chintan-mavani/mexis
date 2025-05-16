@@ -6,8 +6,16 @@
     <title>Our Story - Mexis | Maximum Ease in Hardware Solutions</title>
     <meta name="description" content="Discover Mexis' journey from Surat startup to serving 25+ cities. Mexis stands for 'Maximum Ease' - delivering premium Indian-made hardware solutions since 2021.">
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- SEO Tags -->
+    <meta name="keywords" content="Mexis story, furniture hardware history, Indian hardware manufacturer, Surat based company, maximum ease hardware">
+    <link rel="canonical" href="https://www.mexis.in/our-story" />
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Our Story - Mexis | Maximum Ease in Hardware Solutions">
+    <meta property="og:description" content="Discover Mexis' journey from Surat startup to serving 25+ cities. Mexis stands for 'Maximum Ease' - delivering premium Indian-made hardware solutions since 2021.">
+    <meta property="og:image" content="https://www.mexis.in/images/our-story.jpg">
+    <meta property="og:url" content="https://www.mexis.in/our-story">
+    <meta property="og:type" content="website">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -18,6 +26,9 @@
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    
     <style>
         :root {
             --primary: #2563eb;
@@ -27,31 +38,144 @@
             --light: #f8fafc;
             --gray: #64748b;
             --light-gray: #e2e8f0;
+            --success: #10b981;
+            --error: #ef4444;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --rounded-sm: 0.25rem;
+            --rounded: 0.5rem;
+            --rounded-md: 0.75rem;
+            --rounded-lg: 1rem;
+            --transition: all 0.3s ease;
         }
-        
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
             color: var(--dark);
             background-color: var(--light);
+            line-height: 1.6;
             overflow-x: hidden;
         }
-        
+
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
+            line-height: 1.2;
         }
-        
-        .navbar {
-            background-color: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(8px);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
         }
-        
-        .navbar.scrolled {
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
-        
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            color: var(--dark);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.75rem;
+            border-radius: var(--rounded);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            outline: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            box-shadow: var(--shadow);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
         .logo {
             font-size: 3rem;
             font-weight: 700;
@@ -59,101 +183,163 @@
             display: flex;
             align-items: center;
         }
-        
+
         .logo span {
             color: var(--secondary);
         }
-        
+
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
         .nav-link {
             position: relative;
             font-weight: 500;
             color: var(--dark);
-            margin: 0 0.75rem;
             padding: 0.5rem 0;
         }
-        
+
         .nav-link::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             width: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            transition: all 0.3s ease;
-            border-radius: 3px;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
         }
-        
-        .nav-link:hover::after, .nav-link.active::after {
+
+        .nav-link:hover::after {
             width: 100%;
         }
-        
+
+        .nav-link.active {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--dark);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
         /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.08) 0%, rgba(245, 158, 11, 0.08) 100%);
-            padding: 140px 0 100px;
+        .hero {
+            height: 70vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
             position: relative;
             overflow: hidden;
+            margin-top: 80px;
         }
-        
-        .hero-section::before {
+
+        .hero::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
             opacity: 0.5;
         }
-        
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 100%;
+            text-align: center;
+        }
+
         .hero-title {
             font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
             line-height: 1.2;
             background: linear-gradient(90deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
-        
-        .brand-meaning {
-            display: inline-block;
-            background: rgba(37, 99, 235, 0.1);
-            border-left: 4px solid var(--primary);
-            padding: 0.5rem 1.5rem;
-            border-radius: 0 50px 50px 0;
-            margin: 1.5rem 0;
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        
-        /* Section Styling */
-        .section {
-            padding: 5rem 0;
+
+        .hero-image {
+            border-radius: var(--rounded-lg);
+            box-shadow: var(--shadow-lg);
+            margin-top: 2rem;
         }
-        
-        .section-title {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 3rem;
+
+        /* Stats Section */
+        .stats-section {
+            background-color: white;
         }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -12px;
-            left: 0;
-            width: 60%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            border-radius: 2px;
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
         }
-        
-        /* Timeline */
+
+        .stat-card {
+            background-color: white;
+            border-radius: var(--rounded);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .stat-label {
+            color: var(--gray);
+            font-size: 1rem;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            background-color: var(--light-gray);
+        }
+
         .timeline-container {
             position: relative;
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
+            padding: 0 2rem;
         }
-        
+
         .timeline-container::before {
             content: '';
             position: absolute;
@@ -165,14 +351,14 @@
             transform: translateX(-50%);
             border-radius: 2px;
         }
-        
-        .timeline-card {
-            padding: 15px 40px;
+
+        .timeline-item {
+            padding: 1rem 2rem;
             position: relative;
             width: 50%;
         }
-        
-        .timeline-card::after {
+
+        .timeline-item::after {
             content: '';
             position: absolute;
             width: 24px;
@@ -180,121 +366,215 @@
             background-color: white;
             border: 4px solid var(--primary);
             border-radius: 50%;
-            top: 20px;
+            top: 2rem;
             z-index: 1;
         }
-        
+
         .left {
             left: 0;
             padding-right: 80px;
         }
-        
+
         .right {
             left: 50%;
             padding-left: 80px;
         }
-        
+
         .left::after {
             right: -12px;
         }
-        
+
         .right::after {
             left: -12px;
         }
-        
+
         .timeline-content {
-            padding: 25px;
+            padding: 2rem;
             background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-radius: var(--rounded-lg);
+            box-shadow: var(--shadow);
             position: relative;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
         }
-        
+
         .timeline-content:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow-md);
         }
-        
+
         .timeline-year {
             position: absolute;
-            top: 20px;
+            top: 2rem;
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary);
         }
-        
+
         .left .timeline-year {
             right: -70px;
             text-align: right;
         }
-        
+
         .right .timeline-year {
             left: -70px;
             text-align: left;
         }
-        
-        /* Stats Cards */
-        .stats-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            height: 100%;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            text-align: center;
+
+        .timeline-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
         }
-        
-        .stats-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+
+        .timeline-text {
+            color: var(--gray);
+            margin-bottom: 1rem;
         }
-        
-        .stats-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+
+        .timeline-image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
         }
-        
-        /* Testimonials */
-        .testimonial-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            margin: 1rem;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-        
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-        }
-        
-        .testimonial-img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--primary);
-            margin-bottom: 1.5rem;
-        }
-        
-        /* Map */
-        .map-container {
-            height: 100%;
-            border-radius: 12px;
+
+        .timeline-image {
+            border-radius: var(--rounded);
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            border: 1px solid rgba(0, 0, 0, 0.05);
         }
-        
+
+        /* Brand Meaning Section */
+        .brand-section {
+            background-color: white;
+        }
+
+        .brand-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .brand-image {
+            border-radius: var(--rounded-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .brand-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+        }
+
+        .brand-name {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .brand-logo {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .brand-logo span {
+            color: var(--secondary);
+        }
+
+        .brand-meaning {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--gray);
+        }
+
+        .brand-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .brand-feature-icon {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-top: 0.25rem;
+        }
+
+        .brand-feature-text h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+
+        .brand-feature-text p {
+            color: var(--gray);
+        }
+
+        /* Presence Section */
+        .presence-section {
+            background-color: var(--light-gray);
+        }
+
+        .presence-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .presence-map {
+            border-radius: var(--rounded-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            height: 100%;
+        }
+
+        .presence-map img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .presence-regions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .region-card {
+            background-color: white;
+            border-radius: var(--rounded);
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .region-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .region-cities {
+            list-style: none;
+        }
+
+        .region-city {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .region-city i {
+            color: var(--primary);
+            font-size: 0.8rem;
+        }
+
         /* Future Section */
         .future-section {
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
@@ -302,7 +582,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .future-section::before {
             content: '';
             position: absolute;
@@ -313,14 +593,68 @@
             background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
             opacity: 0.2;
         }
-        
+
+        .future-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .future-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .future-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .future-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .future-feature-icon {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .future-feature-text h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .future-feature-text p {
+            opacity: 0.8;
+        }
+
+        .future-image {
+            border-radius: var(--rounded-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
         /* Footer */
         footer {
             background-color: var(--dark);
             color: white;
-            padding: 5rem 0 2rem;
+            padding: 4rem 0 2rem;
         }
-        
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
         .footer-logo {
             font-size: 2rem;
             font-weight: 700;
@@ -329,46 +663,98 @@
             display: flex;
             align-items: center;
         }
-        
+
         .footer-logo span {
             color: var(--secondary);
         }
-        
+
+        .footer-about p {
+            color: var(--light-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
         .social-link {
-            display: inline-flex;
+            display: flex;
             align-items: center;
             justify-content: center;
-            width: 42px;
-            height: 42px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background-color: rgba(255, 255, 255, 0.1);
             color: white;
-            transition: all 0.3s ease;
-            margin-right: 0.75rem;
+            transition: var(--transition);
         }
-        
+
         .social-link:hover {
             background-color: var(--primary);
             transform: translateY(-3px);
         }
-        
-        /* Responsive */
-        @media (max-width: 992px) {
+
+        .footer-links h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--light-gray);
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--light-gray);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
             .hero-title {
-                font-size: 2.8rem;
+                font-size: 3rem;
+            }
+            
+            .brand-container,
+            .presence-grid,
+            .future-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .brand-image,
+            .future-image {
+                order: -1;
             }
             
             .timeline-container::before {
                 left: 40px;
             }
             
-            .timeline-card {
+            .timeline-item {
                 width: 100%;
                 padding-left: 90px;
                 padding-right: 30px;
             }
             
-            .timeline-card::after {
+            .timeline-item::after {
                 left: 28px;
             }
             
@@ -388,147 +774,180 @@
                 text-align: left;
             }
         }
-        
+
         @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.4rem;
+            .mobile-menu-btn {
+                display: block;
             }
             
-            .section {
-                padding: 4rem 0;
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                gap: 1.5rem;
+                box-shadow: var(--shadow);
+                transform: translateY(-150%);
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            
+            .hero {
+                height: auto;
+                padding: 6rem 0;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .presence-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .presence-map {
+                height: 400px;
+            }
+            
+            .presence-regions {
+                grid-template-columns: 1fr;
             }
         }
-        
+
         @media (max-width: 576px) {
             .hero-title {
                 font-size: 2rem;
             }
             
-            .brand-meaning {
-                padding: 0.5rem 1rem;
-                font-size: 0.9rem;
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .stat-card {
+                padding: 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3">
-        <div class="container">
-            <a class="navbar-brand logo" href="index.html">Mex<span>is</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="Our-story.html">Our Story</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="products.html">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                Mex<span>is</span>
+            </a>
+            
+            <nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="Our-story.html" class="nav-link active">Our Story</a>
+                    <a href="products.html" class="nav-link">Products</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+            </nav>
         </div>
-    </nav>
-
+    </header>
+    
     <!-- Hero Section -->
-    <section class="hero-section">
+    <section class="hero">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h1 class="hero-title animate__animated animate__fadeInDown mb-4">The Mexis Story</h1>
-                    <p class="lead animate__animated animate__fadeInUp">Founded in 2021 in Surat, Gujarat, Mexis is proudly Indian-made, delivering premium hardware solutions across 25+ cities nationwide.</p>
-                    <a href="#timeline" class="btn btn-primary btn-lg px-4 animate__animated animate__fadeInUp animate__delay-1s">Explore Our Journey</a>
-                </div>
-                <div class="col-lg-6 animate__animated animate__fadeIn">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                         alt="Mexis team working" 
-                         class="img-fluid rounded-3 shadow-lg" 
-                         loading="lazy">
-                </div>
+            <div class="hero-content animate__animated animate__fadeIn">
+                <h1 class="hero-title">The Mexis Story</h1>
+                <p class="hero-subtitle">Founded in 2021 in Surat, Gujarat, Mexis is proudly Indian-made, delivering premium hardware solutions across 25+ cities nationwide.</p>
+                <a href="#timeline" class="btn btn-primary">Explore Our Journey</a>
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                     alt="Mexis team working" 
+                     class="hero-image animate__animated animate__fadeInUp animate__delay-1s">
             </div>
         </div>
     </section>
 
     <!-- Stats Section -->
-    <section class="section bg-light">
+    <section id="stats" class="section stats-section">
         <div class="container">
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <div class="stats-card animate__animated animate__fadeInUp">
-                        <div class="stats-icon">
-                            <i class="fas fa-calendar-alt"></i>
-                        </div>
-                        <h3 class="fw-bold">2021</h3>
-                        <p class="text-muted">Founded in Surat</p>
+            <div class="stats-grid">
+                <div class="stat-card animate__animated animate__fadeInUp">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-alt"></i>
                     </div>
+                    <div class="stat-number">2021</div>
+                    <div class="stat-label">Founded in Surat</div>
                 </div>
-                <div class="col-md-3">
-                    <div class="stats-card animate__animated animate__fadeInUp animate__delay-1s">
-                        <div class="stats-icon">
-                            <i class="fas fa-map-marked-alt"></i>
-                        </div>
-                        <h3 class="fw-bold">25+</h3>
-                        <p class="text-muted">Cities Served</p>
+                
+                <div class="stat-card animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="stat-icon">
+                        <i class="fas fa-map-marked-alt"></i>
                     </div>
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Cities Served</div>
                 </div>
-                <div class="col-md-3">
-                    <div class="stats-card animate__animated animate__fadeInUp animate__delay-2s">
-                        <div class="stats-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3 class="fw-bold">50+</h3>
-                        <p class="text-muted">Team Members</p>
+                
+                <div class="stat-card animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
                     </div>
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Team Members</div>
                 </div>
-                <div class="col-md-3">
-                    <div class="stats-card animate__animated animate__fadeInUp animate__delay-3s">
-                        <div class="stats-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <h3 class="fw-bold">100%</h3>
-                        <p class="text-muted">Indian Made</p>
+                
+                <div class="stat-card animate__animated animate__fadeInUp animate__delay-3s">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
                     </div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Indian Made</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Timeline Section -->
-    <section id="timeline" class="section">
+    <section id="timeline" class="section timeline-section">
         <div class="container">
             <h2 class="section-title">Our Growth Journey</h2>
-            <p class="lead mb-5">From a Surat startup to a national presence, our story is one of innovation and dedication to "Maximum Ease"</p>
+            <p class="hero-subtitle text-center">From a Surat startup to a national presence, our story is one of innovation and dedication to "Maximum Ease"</p>
             
             <div class="timeline-container">
                 <!-- 2021 -->
-                <div class="timeline-card left animate__animated">
+                <div class="timeline-item left animate__animated" data-animation="animate__fadeInLeft">
                     <div class="timeline-year">2021</div>
                     <div class="timeline-content">
-                        <h3 class="fw-bold mb-3">The Beginning</h3>
-                        <p class="text-muted"><i class="fas fa-map-marker-alt me-2"></i> Surat, Gujarat</p>
-                        <p>Mexis was founded with a clear vision: to create hardware solutions that bring "Maximum Ease" to furniture functionality. Starting from a small workshop in Surat, we began crafting premium Indian-made hardware.</p>
-                        <div class="row mt-4 g-3">
-                            <div class="col-6">
+                        <h3 class="timeline-title">The Beginning</h3>
+                        <p class="timeline-text"><i class="fas fa-map-marker-alt me-2"></i> Surat, Gujarat</p>
+                        <p class="timeline-text">Mexis was founded with a clear vision: to create hardware solutions that bring "Maximum Ease" to furniture functionality. Starting from a small workshop in Surat, we began crafting premium Indian-made hardware.</p>
+                        <div class="timeline-image-grid">
+                            <div class="timeline-image">
                                 <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
                                      alt="Mexis early workshop" 
-                                     class="img-fluid rounded-3" 
                                      loading="lazy">
                             </div>
-                            <div class="col-6">
+                            <div class="timeline-image">
                                 <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" 
                                      alt="Early Mexis team" 
-                                     class="img-fluid rounded-3" 
                                      loading="lazy">
                             </div>
                         </div>
@@ -536,15 +955,15 @@
                 </div>
                 
                 <!-- Early 2022 -->
-                <div class="timeline-card right animate__animated">
+                <div class="timeline-item right animate__animated" data-animation="animate__fadeInRight">
                     <div class="timeline-year">2022</div>
                     <div class="timeline-content">
-                        <h3 class="fw-bold mb-3">Gujarat Expansion</h3>
-                        <p class="text-muted"><i class="fas fa-map-marker-alt me-2"></i> Across Gujarat</p>
-                        <p>Our commitment to quality and innovation quickly gained recognition. Within a year, we expanded across Gujarat, establishing partnerships with furniture manufacturers throughout the state.</p>
+                        <h3 class="timeline-title">Gujarat Expansion</h3>
+                        <p class="timeline-text"><i class="fas fa-map-marker-alt me-2"></i> Across Gujarat</p>
+                        <p class="timeline-text">Our commitment to quality and innovation quickly gained recognition. Within a year, we expanded across Gujarat, establishing partnerships with furniture manufacturers throughout the state.</p>
                         <div class="mt-4">
-                            <h5 class="fw-bold">Key Achievements:</h5>
-                            <ul class="list-unstyled">
+                            <h4 class="timeline-title">Key Achievements:</h4>
+                            <ul class="timeline-text">
                                 <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Launched first product catalog</li>
                                 <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Established 5-city distribution</li>
                                 <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Team grew to 15 members</li>
@@ -554,14 +973,14 @@
                 </div>
                 
                 <!-- Late 2022 -->
-                <div class="timeline-card left animate__animated">
+                <div class="timeline-item left animate__animated" data-animation="animate__fadeInLeft">
                     <div class="timeline-year">2022</div>
                     <div class="timeline-content">
-                        <h3 class="fw-bold mb-3">National Recognition</h3>
-                        <p class="text-muted"><i class="fas fa-map-marker-alt me-2"></i> Western & Northern India</p>
-                        <p>Demand for our "Maximum Ease" solutions grew beyond Gujarat. We expanded to Maharashtra, Rajasthan, and Delhi NCR, becoming a nationally recognized hardware brand.</p>
+                        <h3 class="timeline-title">National Recognition</h3>
+                        <p class="timeline-text"><i class="fas fa-map-marker-alt me-2"></i> Western & Northern India</p>
+                        <p class="timeline-text">Demand for our "Maximum Ease" solutions grew beyond Gujarat. We expanded to Maharashtra, Rajasthan, and Delhi NCR, becoming a nationally recognized hardware brand.</p>
                         <div class="mt-4">
-                            <h5 class="fw-bold">New Locations:</h5>
+                            <h4 class="timeline-title">New Locations:</h4>
                             <div class="d-flex flex-wrap gap-2">
                                 <span class="badge bg-primary">Mumbai</span>
                                 <span class="badge bg-primary">Pune</span>
@@ -574,12 +993,12 @@
                 </div>
                 
                 <!-- 2023 -->
-                <div class="timeline-card right animate__animated">
+                <div class="timeline-item right animate__animated" data-animation="animate__fadeInRight">
                     <div class="timeline-year">2023</div>
                     <div class="timeline-content">
-                        <h3 class="fw-bold mb-3">Nationwide Presence</h3>
-                        <p class="text-muted"><i class="fas fa-map-marker-alt me-2"></i> 25+ Cities Across India</p>
-                        <p>Today, Mexis serves clients in over 25 cities nationwide, staying true to our "Maximum Ease" philosophy while continuously innovating our product line.</p>
+                        <h3 class="timeline-title">Nationwide Presence</h3>
+                        <p class="timeline-text"><i class="fas fa-map-marker-alt me-2"></i> 25+ Cities Across India</p>
+                        <p class="timeline-text">Today, Mexis serves clients in over 25 cities nationwide, staying true to our "Maximum Ease" philosophy while continuously innovating our product line.</p>
                         <div class="row mt-4 g-3">
                             <div class="col-md-6">
                                 <div class="card border-0 shadow-sm h-100">
@@ -605,49 +1024,51 @@
     </section>
 
     <!-- Brand Meaning Section -->
-    <section class="section bg-light">
+    <section class="section brand-section">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="brand-container">
+                <div class="brand-image">
                     <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                          alt="Mexis hardware products" 
-                         class="img-fluid rounded-3 shadow-lg" 
                          loading="lazy">
                 </div>
-                <div class="col-lg-6">
-                    <h2 class="section-title">The Meaning Behind Mexis</h2>
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="display-4 fw-bold text-primary me-3">Mex<span>is</span></div>
-                        <div class="h4 mb-0">= Maximum Ease</div>
+                <div class="brand-text">
+                    <h2 class="brand-title">The Meaning Behind Mexis</h2>
+                    <div class="brand-name">
+                        <div class="brand-logo">Mex<span>is</span></div>
+                        <div class="brand-meaning">= Maximum Ease</div>
                     </div>
-                    <p class="lead">Our name embodies our core philosophy - creating hardware solutions that provide maximum ease of use, installation, and functionality.</p>
-                    <p>While our name might sound international, Mexis is proudly Indian-made, born in Surat and now serving nationwide. The "Maximum Ease" principle guides every product we design and every partnership we build.</p>
-                    <div class="mt-4">
-                        <div class="d-flex mb-3">
-                            <div class="me-3 text-primary">
-                                <i class="fas fa-check-circle fa-2x"></i>
+                    <p class="timeline-text">Our name embodies our core philosophy - creating hardware solutions that provide maximum ease of use, installation, and functionality.</p>
+                    <p class="timeline-text">While our name might sound international, Mexis is proudly Indian-made, born in Surat and now serving nationwide. The "Maximum Ease" principle guides every product we design and every partnership we build.</p>
+                    
+                    <div class="brand-features">
+                        <div class="brand-feature">
+                            <div class="brand-feature-icon">
+                                <i class="fas fa-check-circle"></i>
                             </div>
-                            <div>
-                                <h5 class="fw-bold mb-1">Not Mexican Hardware</h5>
-                                <p class="text-muted mb-0">Proudly designed and manufactured in India</p>
-                            </div>
-                        </div>
-                        <div class="d-flex mb-3">
-                            <div class="me-3 text-primary">
-                                <i class="fas fa-check-circle fa-2x"></i>
-                            </div>
-                            <div>
-                                <h5 class="fw-bold mb-1">Maximum Functionality</h5>
-                                <p class="text-muted mb-0">Products designed for effortless use</p>
+                            <div class="brand-feature-text">
+                                <h4>Not Mexican Hardware</h4>
+                                <p>Proudly designed and manufactured in India</p>
                             </div>
                         </div>
-                        <div class="d-flex">
-                            <div class="me-3 text-primary">
-                                <i class="fas fa-check-circle fa-2x"></i>
+                        
+                        <div class="brand-feature">
+                            <div class="brand-feature-icon">
+                                <i class="fas fa-check-circle"></i>
                             </div>
-                            <div>
-                                <h5 class="fw-bold mb-1">Ease of Installation</h5>
-                                <p class="text-muted mb-0">Simplified solutions for professionals</p>
+                            <div class="brand-feature-text">
+                                <h4>Maximum Functionality</h4>
+                                <p>Products designed for effortless use</p>
+                            </div>
+                        </div>
+                        
+                        <div class="brand-feature">
+                            <div class="brand-feature-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="brand-feature-text">
+                                <h4>Ease of Installation</h4>
+                                <p>Simplified solutions for professionals</p>
                             </div>
                         </div>
                     </div>
@@ -657,79 +1078,60 @@
     </section>
 
     <!-- Presence Section -->
-    <section class="section">
+    <section id="presence" class="section presence-section">
         <div class="container">
             <h2 class="section-title">Our National Presence</h2>
-            <p class="lead mb-5">From our Surat roots to 25+ cities across India</p>
+            <p class="hero-subtitle text-center">From our Surat roots to 25+ cities across India</p>
             
-            <div class="row g-4">
-                <div class="col-lg-6">
-                    <div class="map-container h-100">
-                        <!-- Replace with your actual map embed -->
-                        <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                             alt="India map showing Mexis presence" 
-                             class="img-fluid h-100 w-100 object-fit-cover" 
-                             loading="lazy">
-                    </div>
+            <div class="presence-grid">
+                <div class="presence-map">
+                    <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                         alt="India map showing Mexis presence" 
+                         loading="lazy">
                 </div>
-                <div class="col-lg-6">
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="card border-0 shadow-sm h-100">
-                                <div class="card-body">
-                                    <h4 class="fw-bold mb-4"><i class="fas fa-map-marked-alt text-primary me-2"></i> West India</h4>
-                                    <ul class="list-unstyled">
-                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Surat</li>
-                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Mumbai</li>
-                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Pune</li>
-                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Ahmedabad</li>
-                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Vadodara</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card border-0 shadow-sm h-100">
-                                <div class="card-body">
-                                    <h4 class="fw-bold mb-4"><i class="fas fa-map-marked-alt text-primary me-2"></i> North India</h4>
-                                    <ul class="list-unstyled">
-                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Delhi</li>
-                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Jaipur</li>
-                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Chandigarh</li>
-                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Lucknow</li>
-                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Dehradun</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card border-0 shadow-sm h-100">
-                                <div class="card-body">
-                                    <h4 class="fw-bold mb-4"><i class="fas fa-map-marked-alt text-primary me-2"></i> South India</h4>
-                                    <ul class="list-unstyled">
-                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Bangalore</li>
-                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Hyderabad</li>
-                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Chennai</li>
-                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Kochi</li>
-                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Coimbatore</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="card border-0 shadow-sm h-100">
-                                <div class="card-body">
-                                    <h4 class="fw-bold mb-4"><i class="fas fa-map-marked-alt text-primary me-2"></i> East India</h4>
-                                    <ul class="list-unstyled">
-                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Kolkata</li>
-                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Bhubaneswar</li>
-                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Guwahati</li>
-                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Patna</li>
-                                        <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i> Ranchi</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                <div class="presence-regions">
+                    <div class="region-card">
+                        <h3 class="region-title"><i class="fas fa-map-marker-alt"></i> West India</h3>
+                        <ul class="region-cities">
+                            <li class="region-city"><i class="fas fa-map-pin"></i> Surat</li>
+                            <li class="region-city"><i class="fas fa-map-pin"></i> Mumbai</li>
+                            <li class="region-city"><i class="fas fa-map-pin"></i> Pune</li>
+                            <li class="region-city"><i class="fas fa-map-pin"></i> Ahmedabad</li>
+                            <li class="region-city"><i class="fas fa-map-pin"></i> Vadodara</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="region-card">
+                        <h3 class="region-title"><i class="fas fa-map-marker-alt"></i> North India</h3>
+                        <ul class="region-cities">
+                            <li class="region-city"><i class="fas fa-map-pin"></i> Delhi</li>
+                            <li class="region-city"><i class="fas fa-map-pin"></i> Jaipur</li>
+                            <li class="region-city"><i class="fas fa-map-pin"></i> Chandigarh</li>
+                            <li class="region-city"><i class="fas fa-map-pin"></i> Lucknow</li>
+                            <li class="region-city"><i class="fas fa-map-pin"></i> Dehradun</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="region-card">
+                        <h3 class="region-title"><i class="fas fa-map-marker-alt"></i> South India</h3>
+                        <ul class="region-cities">
+                            <li class="region-city"><i class="fas fa-map-pin"></i> Bangalore</li>
+                            <li class="region-city"><i class="fas fa-map-pin"></i> Hyderabad</li>
+                            <li class="region-city"><i class="fas fa-map-pin"></i> Chennai</li>
+                            <li class="region-city"><i class="fas fa-map-pin"></i> Kochi</li>
+                            <li class="region-city"><i class="fas fa-map-pin"></i> Coimbatore</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="region-card">
+                        <h3 class="region-title"><i class="fas fa-map-marker-alt"></i> East India</h3>
+                        <ul class="region-cities">
+                            <li class="region-city"><i class="fas fa-map-pin"></i> Kolkata</li>
+                            <li class="region-city"><i class="fas fa-map-pin"></i> Bhubaneswar</li>
+                            <li class="region-city"><i class="fas fa-map-pin"></i> Guwahati</li>
+                            <li class="region-city"><i class="fas fa-map-pin"></i> Patna</li>
+                            <li class="region-city"><i class="fas fa-map-pin"></i> Ranchi</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -737,44 +1139,47 @@
     </section>
 
     <!-- Future Section -->
-    <section class="future-section section">
-        <div class="container position-relative">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <h2 class="text-white mb-4">The Future of Mexis</h2>
-                    <p class="lead text-white mb-4">As we continue our journey, we remain committed to our "Maximum Ease" philosophy while expanding our horizons.</p>
-                    <div class="d-flex mb-4">
-                        <div class="me-3 text-white">
-                            <i class="fas fa-arrow-right fa-2x"></i>
+    <section class="section future-section">
+        <div class="container">
+            <div class="future-container">
+                <div class="future-content">
+                    <h2 class="future-title">The Future of Mexis</h2>
+                    <p class="future-subtitle">As we continue our journey, we remain committed to our "Maximum Ease" philosophy while expanding our horizons.</p>
+                    
+                    <div class="future-feature">
+                        <div class="future-feature-icon">
+                            <i class="fas fa-arrow-right"></i>
                         </div>
-                        <div>
-                            <h4 class="text-white fw-bold mb-1">Product Innovation</h4>
-                            <p class="text-white-50 mb-0">Developing smarter hardware solutions for modern furniture</p>
-                        </div>
-                    </div>
-                    <div class="d-flex mb-4">
-                        <div class="me-3 text-white">
-                            <i class="fas fa-arrow-right fa-2x"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-white fw-bold mb-1">Sustainability Focus</h4>
-                            <p class="text-white-50 mb-0">Eco-friendly materials and manufacturing processes</p>
+                        <div class="future-feature-text">
+                            <h3>Product Innovation</h3>
+                            <p>Developing smarter hardware solutions for modern furniture</p>
                         </div>
                     </div>
-                    <div class="d-flex">
-                        <div class="me-3 text-white">
-                            <i class="fas fa-arrow-right fa-2x"></i>
+                    
+                    <div class="future-feature">
+                        <div class="future-feature-icon">
+                            <i class="fas fa-arrow-right"></i>
                         </div>
-                        <div>
-                            <h4 class="text-white fw-bold mb-1">National Coverage</h4>
-                            <p class="text-white-50 mb-0">Expanding to serve every corner of India</p>
+                        <div class="future-feature-text">
+                            <h3>Sustainability Focus</h3>
+                            <p>Eco-friendly materials and manufacturing processes</p>
+                        </div>
+                    </div>
+                    
+                    <div class="future-feature">
+                        <div class="future-feature-icon">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                        <div class="future-feature-text">
+                            <h3>National Coverage</h3>
+                            <p>Expanding to serve every corner of India</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                
+                <div class="future-image">
                     <img src="Future.jpg" 
                          alt="Future vision" 
-                         class="img-fluid rounded-3 shadow-lg" 
                          loading="lazy">
                 </div>
             </div>
@@ -784,69 +1189,76 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="row g-4">
-                <div class="col-lg-4">
+            <div class="footer-container">
+                <div class="footer-about">
                     <div class="footer-logo">Mex<span>is</span></div>
-                    <p class="text-light mt-3">Delivering "Maximum Ease" through premium hardware solutions. Proudly Indian-made since 2021.</p>
-                    <div class="mt-4">
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    <p>Delivering "Maximum Ease" through premium hardware solutions. Proudly Indian-made since 2021.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-4">
-                    <h5 class="text-white mb-4">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="text-light">Home</a></li>
-                        <li class="mb-2"><a href="Our-story.html" class="text-light">Our Story</a></li>
-                        <li class="mb-2"><a href="products.html" class="text-light">Products</a></li>
-                        <li class="mb-2"><a href="blog.html" class="text-light">Blog</a></li>
-                        <li class="mb-2"><a href="index.html#contact" class="text-light">Contact</a></li>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Our-story.html">Our Story</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-md-4">
-                    <h5 class="text-white mb-4">Products</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="products.html#wardrobe" class="text-light">Wardrobe Systems</a></li>
-                        <li class="mb-2"><a href="products.html#kitchen" class="text-light">Kitchen Solutions</a></li>
-                        <li class="mb-2"><a href="products.html#sliding" class="text-light">Sliding Door Systems</a></li>
-                        <li class="mb-2"><a href="products.html#hardware" class="text-light">Cabinet Hardware</a></li>
-                        <li class="mb-2"><a href="products.html#profiles" class="text-light">Aluminum Profiles</a></li>
+                
+                <div class="footer-links">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="products.html#wardrobe">Wardrobe Systems</a></li>
+                        <li><a href="products.html#kitchen">Kitchen Solutions</a></li>
+                        <li><a href="products.html#sliding">Sliding Door Systems</a></li>
+                        <li><a href="products.html#hardware">Cabinet Hardware</a></li>
+                        <li><a href="products.html#profiles">Aluminum Profiles</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-md-4">
-                    <h5 class="text-white mb-4">Contact Us</h5>
-                    <ul class="list-unstyled text-light">
-                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Surat, Gujarat, India</li>
-                        <li class="mb-2"><i class="fas fa-envelope me-2"></i>ayanenterprise0821@gmail.com</li>
-                        <li class="mb-2"><i class="fas fa-clock me-2"></i> Mon-Sat: 9AM - 7PM</li>
+                
+                <div class="footer-links">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Surat, Gujarat, India</li>
+                        <li><i class="fas fa-envelope me-2"></i> ayanenterprise0821@gmail.com</li>
+                        <li><i class="fas fa-clock me-2"></i> Mon-Sat: 9AM - 7PM</li>
                     </ul>
                 </div>
             </div>
-            <hr class="my-4 bg-light opacity-10">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2023 Mexis by Ayan Enterprise. All rights reserved.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> in India</p>
-                </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Mexis by Ayan Enterprise. All Rights Reserved. Designed with <i class="fas fa-heart" style="color: var(--error);"></i> in India</p>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
+                header.classList.add('scrolled');
             } else {
-                navbar.classList.remove('scrolled');
+                header.classList.remove('scrolled');
             }
         });
         
@@ -860,7 +1272,9 @@
                 
                 if (elementPosition < windowHeight - 100) {
                     const animation = element.getAttribute('data-animation');
-                    element.classList.add(animation);
+                    if (animation) {
+                        element.classList.add(animation);
+                    }
                 }
             });
         };
@@ -870,9 +1284,28 @@
         // Animate on scroll
         window.addEventListener('scroll', animateOnScroll);
         
-        // Set animation for timeline cards
-        document.querySelectorAll('.timeline-card').forEach((card, index) => {
-            card.setAttribute('data-animation', index % 2 === 0 ? 'animate__fadeInLeft' : 'animate__fadeInRight');
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
         });
     </script>
 </body>
