@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Tags -->
+    <title>Mexis - Product Installation Guides & Manuals</title>
+    <meta name="description" content="Comprehensive installation guides for Mexis furniture hardware products including tandem systems, aluminum profiles, and wardrobe solutions.">
+    <meta name="keywords" content="furniture hardware installation, kitchen tandem guide, aluminum profile setup, wardrobe system manual">
+    <link rel="canonical" href="https://www.mexis.in/installation-guides" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --success: #10b981;
+            --error: #ef4444;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --rounded-sm: 0.25rem;
+            --rounded: 0.5rem;
+            --rounded-md: 0.75rem;
+            --rounded-lg: 1rem;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            color: var(--dark);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.75rem;
+            border-radius: var(--rounded);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            outline: none;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            box-shadow: var(--shadow);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            color: var(--dark);
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link.active {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--dark);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Page Hero Section */
+        .page-hero {
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
+            opacity: 0.5;
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .page-hero-title {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+        }
+
+        .page-hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+        }
+
+        /* Installation Guides Section */
+        .installation-guides {
+            background-color: white;
+        }
+
+        .guide-categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .guide-category-btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--rounded);
+            background-color: var(--light-gray);
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .guide-category-btn:hover, .guide-category-btn.active {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .guide-card {
+            background-color: white;
+            border-radius: var(--rounded);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .guide-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .guide-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .guide-content {
+            padding: 1.5rem;
+        }
+
+        .guide-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .guide-description {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .guide-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray);
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .guide-download {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        /* Step-by-step Guide Section */
+        .step-by-step {
+            background-color: #f8fafc;
+        }
+
+        .step-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .step-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+
+        .step {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .step-content {
+            flex-grow: 1;
+        }
+
+        .step-heading {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+
+        .step-description {
+            color: var(--gray);
+            margin-bottom: 1rem;
+        }
+
+        .step-image {
+            border-radius: var(--rounded);
+            margin-top: 1rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .warning-note {
+            background-color: #fff8e6;
+            border-left: 4px solid var(--secondary);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 var(--rounded) var(--rounded) 0;
+        }
+
+        /* Tools Section */
+        .tools-section {
+            background-color: white;
+        }
+
+        .tools-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tool-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background-color: var(--light);
+            border-radius: var(--rounded);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .tool-icon {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: #f8fafc;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-radius: var(--rounded);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-question {
+            padding: 1.25rem;
+            background-color: white;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            padding: 0 1.25rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+            background-color: white;
+        }
+
+        .faq-answer.active {
+            padding: 0 1.25rem 1.25rem;
+            max-height: 500px;
+        }
+        
+        /* Category Navigation */
+        .category-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .category-btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--rounded);
+            background-color: var(--light-gray);
+            color: var(--dark);
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .category-btn:hover, .category-btn.active {
+            background-color: var(--primary);
+            color: white;
+        }
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-logo span {
+            color: var(--secondary);
+        }
+
+        .footer-about p {
+            color: var(--light-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--light-gray);
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--light-gray);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .page-hero-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                gap: 1.5rem;
+                box-shadow: var(--shadow);
+                transform: translateY(-150%);
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            
+            .page-hero {
+                height: 60vh;
+                min-height: auto;
+                padding: 4rem 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-hero-title {
+                font-size: 2rem;
+            }
+            
+            .page-hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .step {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                Mex<span>is</span>
+            </a>
+            
+            <nav>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html#about" class="nav-link">About Us</a>
+                    <a href="products.html" class="nav-link">Products</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                    <a href="index.html#our-presence" class="nav-link">Our Presence</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Page Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 class="page-hero-title animate__animated animate__fadeInDown">Installation Guides</h1>
+                <p class="page-hero-subtitle animate__animated animate__fadeInUp">Step-by-step instructions to install your Mexis hardware products correctly</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation Guides Section -->
+    <section class="section installation-guides">
+        <div class="container">
+            <h2 class="section-title">Product Installation Manuals</h2>
+            <p class="text-center mb-8" style="max-width: 800px; margin: 0 auto 3rem; color: var(--gray);">
+                Download comprehensive installation guides for all Mexis products. Each guide contains detailed instructions, diagrams, and troubleshooting tips.
+            </p>
+            
+            <div class="guide-categories">
+                <button class="guide-category-btn active" data-category="all">All Guides</button>
+                <button class="guide-category-btn" data-category="kitchen">Kitchen Systems</button>
+                <button class="guide-category-btn" data-category="wardrobe">Wardrobe Systems</button>
+                <button class="guide-category-btn" data-category="security">Security Hardware</button>
+                <button class="guide-category-btn" data-category="accessories">Accessories</button>
+            </div>
+            
+            <div class="guide-grid">
+                <!-- Tandem Box Guide -->
+                <div class="guide-card" data-category="kitchen">
+                    <img src="tandem-installation.jpg" alt="Tandem Box Installation" class="guide-image">
+                    <div class="guide-content">
+                        <h3 class="guide-title">Kitchen Tandem Box</h3>
+                        <div class="guide-meta">
+                            <span><i class="far fa-file-pdf"></i> PDF</span>
+                            <span>Last updated: May 2024</span>
+                        </div>
+                        <p class="guide-description">Complete installation guide for Mexis Kitchen Tandem Box systems including soft-close mechanism setup and alignment.</p>
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download Guide
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Aluminum Profile Guide -->
+                <div class="guide-card" data-category="wardrobe">
+                    <img src="aluminum-profile-install.jpg" alt="Aluminum Profile Installation" class="guide-image">
+                    <div class="guide-content">
+                        <h3 class="guide-title">Aluminum Profiles</h3>
+                        <div class="guide-meta">
+                            <span><i class="far fa-file-pdf"></i> PDF</span>
+                            <span>Last updated: April 2024</span>
+                        </div>
+                        <p class="guide-description">Detailed instructions for cutting, joining, and installing aluminum profiles for wardrobe systems.</p>
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download Guide
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Mortise Lock Guide -->
+                <div class="guide-card" data-category="security">
+                    <img src="mortise-lock-install.jpg" alt="Mortise Lock Installation" class="guide-image">
+                    <div class="guide-content">
+                        <h3 class="guide-title">Mortise Lock</h3>
+                        <div class="guide-meta">
+                            <span><i class="far fa-file-pdf"></i> PDF</span>
+                            <span>Last updated: March 2024</span>
+                        </div>
+                        <p class="guide-description">Step-by-step guide for proper mortise lock installation and key alignment procedures.</p>
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download Guide
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Telescopic Channel Guide -->
+                <div class="guide-card" data-category="wardrobe">
+                    <img src="telescopic-channel-install.jpg" alt="Telescopic Channel Installation" class="guide-image">
+                    <div class="guide-content">
+                        <h3 class="guide-title">Telescopic Channel</h3>
+                        <div class="guide-meta">
+                            <span><i class="far fa-file-pdf"></i> PDF</span>
+                            <span>Last updated: February 2024</span>
+                        </div>
+                        <p class="guide-description">Comprehensive guide for installing telescopic channels in drawers and sliding systems.</p>
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download Guide
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hydraulic Gas Pump Guide -->
+                <div class="guide-card" data-category="accessories">
+                    <img src="hydraulic-pump-install.jpg" alt="Hydraulic Gas Pump Installation" class="guide-image">
+                    <div class="guide-content">
+                        <h3 class="guide-title">Hydraulic Gas Pump</h3>
+                        <div class="guide-meta">
+                            <span><i class="far fa-file-pdf"></i> PDF</span>
+                            <span>Last updated: January 2024</span>
+                        </div>
+                        <p class="guide-description">Installation and maintenance guide for hydraulic gas pump systems in furniture applications.</p>
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download Guide
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Sliding Fittings Guide -->
+                <div class="guide-card" data-category="accessories">
+                    <img src="sliding-fittings-install.jpg" alt="Sliding Fittings Installation" class="guide-image">
+                    <div class="guide-content">
+                        <h3 class="guide-title">Sliding Fittings</h3>
+                        <div class="guide-meta">
+                            <span><i class="far fa-file-pdf"></i> PDF</span>
+                            <span>Last updated: December 2023</span>
+                        </div>
+                        <p class="guide-description">Complete guide for installing sliding door fittings and track systems.</p>
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download Guide
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Step-by-step Guide Section -->
+    <section class="section step-by-step">
+        <div class="container">
+            <h2 class="section-title">Step-by-Step Installation</h2>
+            
+            <div class="step-container">
+                <h3 class="step-title">Kitchen Tandem Box Installation Guide</h3>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4 class="step-heading">Prepare the Cabinet</h4>
+                        <p class="step-description">
+                            Ensure the cabinet opening is square and the sides are parallel. The standard height for base cabinets is 720mm. 
+                            Check that the cabinet is level both front-to-back and side-to-side.
+                        </p>
+                        <img src="cabinet-prep.jpg" alt="Cabinet Preparation" class="step-image">
+                        <div class="warning-note">
+                            <strong><i class="fas fa-exclamation-triangle"></i> Important:</strong> 
+                            The cabinet must be perfectly square for proper tandem box operation. 
+                            Maximum tolerance is ±1mm over the height of the cabinet.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4 class="step-heading">Mark the Mounting Positions</h4>
+                        <p class="step-description">
+                            Using the provided template, mark the positions for the tandem runners on both sides of the cabinet. 
+                            The standard height from the cabinet floor to the bottom of the runner is 50mm.
+                        </p>
+                        <img src="marking-positions.jpg" alt="Marking Positions" class="step-image">
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4 class="step-heading">Install the Runners</h4>
+                        <p class="step-description">
+                            Secure the runners to the cabinet sides using the provided screws. 
+                            Ensure all screws are tightened securely but avoid overtightening which may strip the screw holes.
+                        </p>
+                        <img src="install-runners.jpg" alt="Installing Runners" class="step-image">
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4 class="step-heading">Attach the Drawer Box</h4>
+                        <p class="step-description">
+                            Slide the drawer box onto the runners until it clicks into place. 
+                            Test the smooth operation of the drawer and adjust if necessary using the built-in adjustment screws.
+                        </p>
+                        <img src="attach-drawer.jpg" alt="Attaching Drawer" class="step-image">
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4 class="step-heading">Final Adjustments</h4>
+                        <p class="step-description">
+                            Use the height adjustment screws to level the drawer front with adjacent drawers or cabinet fronts. 
+                            Adjust the front-to-back alignment using the depth adjustment screws.
+                        </p>
+                        <img src="final-adjustments.jpg" alt="Final Adjustments" class="step-image">
+                        <div class="warning-note">
+                            <strong><i class="fas fa-lightbulb"></i> Pro Tip:</strong> 
+                            For perfect alignment, adjust with the drawer in the closed position and check alignment in both closed and open positions.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="section tools-section">
+        <div class="container">
+            <h2 class="section-title">Recommended Tools</h2>
+            <p class="text-center mb-8" style="max-width: 800px; margin: 0 auto 3rem; color: var(--gray);">
+                For best results, use these tools when installing Mexis hardware products
+            </p>
+            
+            <div class="tools-list">
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-ruler-combined"></i>
+                    </div>
+                    <div>
+                        <h4>Measuring Tape</h4>
+                        <p style="font-size: 0.875rem; color: var(--gray);">Precision measurement</p>
+                    </div>
+                </div>
+                
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-screwdriver"></i>
+                    </div>
+                    <div>
+                        <h4>#2 Phillips Screwdriver</h4>
+                        <p style="font-size: 0.875rem; color: var(--gray);">For most screws</p>
+                    </div>
+                </div>
+                
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <div>
+                        <h4>Rubber Mallet</h4>
+                        <p style="font-size: 0.875rem; color: var(--gray);">Gentle adjustments</p>
+                    </div>
+                </div>
+                
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-level-up-alt"></i>
+                    </div>
+                    <div>
+                        <h4>Spirit Level</h4>
+                        <p style="font-size: 0.875rem; color: var(--gray);">Ensuring level installation</p>
+                    </div>
+                </div>
+                
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <div>
+                        <h4>Marking Pencil</h4>
+                        <p style="font-size: 0.875rem; color: var(--gray);">Accurate marking</p>
+                    </div>
+                </div>
+                
+                <div class="tool-item">
+                    <div class="tool-icon">
+                        <i class="fas fa-ruler"></i>
+                    </div>
+                    <div>
+                        <h4>Square</h4>
+                        <p style="font-size: 0.875rem; color: var(--gray);">Checking right angles</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <div class="container">
+            <h2 class="section-title">Installation FAQs</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What should I do if my drawer isn't closing smoothly?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        First, check that the cabinet is perfectly square and the runners are installed at exactly the same height on both sides. 
+                        If the drawer still doesn't close smoothly, use the adjustment screws on the runners to fine-tune the alignment. 
+                        Small adjustments of 1-2mm can make a big difference in operation.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I install Mexis hardware on existing cabinets?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer active">
+                    <p>
+                        Yes, Mexis hardware can be retrofitted to most existing cabinets. You may need to make some modifications to the cabinet 
+                        interior to accommodate the new hardware. Our universal mounting system allows for flexible installation in most standard 
+                        cabinet configurations. Measure your existing cabinet carefully before purchasing to ensure compatibility.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What's the maximum weight capacity for tandem drawer systems?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Our standard tandem drawer systems are rated for 25kg per pair of runners. For heavy-duty applications, we offer 
+                        reinforced systems rated for up to 50kg. Always distribute weight evenly in the drawer and avoid exceeding the 
+                        rated capacity to ensure smooth operation and longevity of the hardware.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do I maintain my hardware for long-lasting performance?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        For optimal performance, clean runners and moving parts with a dry cloth periodically. Apply a small amount of silicone-based 
+                        lubricant (not oil-based) to the runners every 12-18 months. Avoid getting cleaning products on the hardware as some 
+                        chemicals can degrade the finish or affect the soft-close mechanism.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What's the warranty on Mexis hardware products?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        All Mexis hardware comes with a 5-year limited warranty against manufacturing defects when installed according to our 
+                        instructions. The warranty covers replacement of defective parts but does not cover damage from improper installation, 
+                        misuse, or normal wear and tear. Register your product on our website to activate your warranty coverage.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Mex<span>is</span></div>
+                    <p>Mexis offers premium home furniture design solutions, including kitchen tandem systems, wardrobe hardware, and modern aluminum profiles.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="installation-guides.html">Installation Guides</a></li>
+                        <li><a href="#">Product Catalog</a></li>
+                        <li><a href="#">Warranty Information</a></li>
+                        <li><a href="#">Technical Specifications</a></li>
+                        <li><a href="#">Dealer Portal</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Spare Parts</a></li>
+                        <li><a href="#">Product Registration</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mexis. All Rights Reserved. Designed with <i class="fas fa-heart" style="color: var(--error);"></i> in India</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Header Scroll Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Guide Category Filter
+        const guideCategoryBtns = document.querySelectorAll('.guide-category-btn');
+        const guideCards = document.querySelectorAll('.guide-card');
+
+        guideCategoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                guideCategoryBtns.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const category = btn.dataset.category;
+
+                // Filter guides
+                guideCards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isActive = answer.classList.contains('active');
+                
+                // Close all answers first
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.classList.remove('active');
+                });
+                
+                // Toggle current answer if it wasn't active
+                if (!isActive) {
+                    answer.classList.add('active');
+                }
+                
+                // Rotate chevron icon
+                const icon = question.querySelector('i');
+                icon.style.transform = answer.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0)';
+            });
+        });
+        
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
