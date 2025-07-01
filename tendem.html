@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mexis - Premium Slim Tandem System Boxes for Modern Furniture</title>
+    <meta name="description" content="Explore Mexis' premium slim tandem system boxes available in multiple sizes and grey finishes for all your modern furniture needs.">
+    <meta name="keywords" content="tandem system, slim boxes, drawer systems, furniture hardware, grey tandem boxes, kitchen hardware">
+    <link rel="canonical" href="https://www.mexis.in/slim-tandem-system" />
+    
+    <!-- Preload resources -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --light-gray: #e2e8f0;
+            --success: #10b981;
+            --error: #ef4444;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --rounded-sm: 0.25rem;
+            --rounded: 0.5rem;
+            --rounded-md: 0.75rem;
+            --rounded-lg: 1rem;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.75rem;
+            border-radius: var(--rounded);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            outline: none;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background-color: var(--gray);
+            color: white;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            box-shadow: var(--shadow);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            position: relative;
+            font-weight: 500;
+            color: var(--dark);
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link.active {
+            color: var(--primary);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--dark);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* Hero Section */
+        .page-hero {
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(245, 158, 11, 0.1) 100%);
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==');
+            opacity: 0.5;
+        }
+
+        .page-hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .page-hero-title {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+        }
+
+        .page-hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Floating Elements */
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            opacity: 0.1;
+            filter: blur(20px);
+            z-index: 0;
+        }
+
+        /* Products Section */
+        .products {
+            background-color: white;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: var(--rounded);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .product-image-container {
+            height: 250px;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            color: var(--dark);
+        }
+
+        .product-description {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .product-options {
+            margin: 1rem 0;
+        }
+
+        .options-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--gray);
+            margin-bottom: 0.5rem;
+        }
+
+        .size-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .size-option {
+            padding: 0.5rem 1rem;
+            background-color: var(--light-gray);
+            border-radius: var(--rounded-sm);
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .size-option:hover, .size-option.active {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* Color Options */
+        .color-options {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 0.5rem;
+        }
+
+        .color-option {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid var(--light-gray);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .color-option:hover {
+            transform: scale(1.1);
+            border-color: var(--primary);
+        }
+
+        .color-option.active::after {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border: 1px solid var(--primary);
+            border-radius: 50%;
+        }
+
+        /* Color classes */
+        .color-dark-grey { background-color: #383838; }
+        .color-graphite { background-color: #4a4a4a; }
+        .color-silver { background-color: #c0c0c0; }
+
+        /* Specifications Table */
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.875rem;
+        }
+
+        .specs-table th, .specs-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .specs-table th {
+            background-color: rgba(37, 99, 235, 0.05);
+            color: var(--primary);
+            font-weight: 600;
+            width: 50%;
+        }
+
+        /* Features Section */
+        .features-section {
+            background-color: #f5f7fa;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: var(--rounded);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .feature-description {
+            color: var(--gray);
+            font-size: 0.9375rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .footer-logo span {
+            color: var(--secondary);
+        }
+
+        .footer-about p {
+            color: var(--light-gray);
+            margin-bottom: 1.5rem;
+            font-size: 0.9375rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-links h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--light-gray);
+            transition: var(--transition);
+            font-size: 0.9375rem;
+            display: inline-block;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--light-gray);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .page-hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2.25rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 0;
+                gap: 1.5rem;
+                box-shadow: var(--shadow);
+                transform: translateY(-150%);
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            
+            .page-hero {
+                height: 60vh;
+                min-height: auto;
+                padding: 4rem 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-hero-title {
+                font-size: 2rem;
+            }
+            
+            .page-hero-subtitle {
+                font-size: 1rem;
+                padding: 0 1rem;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
+            }
+            
+            .color-option {
+                width: 20px;
+                height: 20px;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                Mex<span>is</span>
+            </a>
+            
+            <nav aria-label="Main navigation">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu" aria-expanded="false">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    <a href="products.html" class="nav-link active">Products</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Page Hero Section -->
+    <section class="page-hero" aria-labelledby="pageHeroTitle">
+        <!-- Floating background elements -->
+        <div class="floating-element" style="width: 300px; height: 300px; top: 10%; left: 5%;"></div>
+        <div class="floating-element" style="width: 200px; height: 200px; bottom: 10%; right: 15%;"></div>
+        <div class="floating-element" style="width: 150px; height: 150px; top: 20%; right: 10%;"></div>
+        
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 id="pageHeroTitle" class="page-hero-title animate__animated animate__fadeInDown">Slim Tandem System Boxes</h1>
+                <p class="page-hero-subtitle animate__animated animate__fadeInUp">Premium quality slim tandem boxes available in multiple sizes and finishes for modern furniture solutions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products" aria-labelledby="productsTitle">
+        <div class="container">
+            <div class="back-btn">
+                <a href="products.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Products
+                </a>
+            </div>
+
+            <h2 id="productsTitle" class="section-title">Our Slim Tandem System Collection</h2>
+            
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img src="D:\Mexis\Tandem\Image 1.png" alt="Slim Tandem Box 300mm" class="product-image" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Slim Tandem Box 300mm</h3>
+                        <p class="product-description">Compact 300mm slim tandem box perfect for small drawers and space-saving solutions. Features smooth operation and durable construction.</p>
+                        
+                        <div class="product-options">
+                            <p class="options-title">Available Heights:</p>
+                            <div class="size-options">
+                                <button class="size-option active">84mm</button>
+                                <button class="size-option">116mm</button>
+                                <button class="size-option">167mm</button>
+                            </div>
+                            
+                            <p class="options-title">Available Colors:</p>
+                            <div class="color-options">
+                                <button class="color-option color-dark-grey active" aria-label="Dark Grey"></button>
+                                <button class="color-option color-graphite" aria-label="Graphite"></button>
+                                <button class="color-option color-silver" aria-label="Silver"></button>
+                            </div>
+                        </div>
+                        
+                        <table class="specs-table">
+                            <caption class="sr-only">Product Specifications</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Load Capacity</th>
+                                    <td>40kg</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Material</th>
+                                    <td>Steel with powder coating</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Extension</th>
+                                    <td>Full extension</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <a href="/product-details/slim-tandem-300" class="btn btn-primary">View Details</a>
+                    </div>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img src="D:\Mexis\Tandem\Image 2.png" alt="Slim Tandem Box 350mm" class="product-image" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Slim Tandem Box 350mm</h3>
+                        <p class="product-description">Versatile 350mm slim tandem box offering the perfect balance between space and functionality. Ideal for standard drawer applications.</p>
+                        
+                        <div class="product-options">
+                            <p class="options-title">Available Heights:</p>
+                            <div class="size-options">
+                                <button class="size-option">84mm</button>
+                                <button class="size-option active">116mm</button>
+                                <button class="size-option">167mm</button>
+                            </div>
+                            
+                            <p class="options-title">Available Colors:</p>
+                            <div class="color-options">
+                                <button class="color-option color-dark-grey active" aria-label="Dark Grey"></button>
+                                <button class="color-option color-graphite" aria-label="Graphite"></button>
+                                <button class="color-option color-silver" aria-label="Silver"></button>
+                            </div>
+                        </div>
+                        
+                        <table class="specs-table">
+                            <caption class="sr-only">Product Specifications</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Load Capacity</th>
+                                    <td>45kg</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Material</th>
+                                    <td>Steel with powder coating</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Extension</th>
+                                    <td>Full extension</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <a href="/product-details/slim-tandem-350" class="btn btn-primary">View Details</a>
+                    </div>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img src="D:\Mexis\Tandem\Image 3.png" alt="Slim Tandem Box 400mm" class="product-image" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Slim Tandem Box 400mm</h3>
+                        <p class="product-description">Spacious 400mm slim tandem box designed for medium-sized drawers. Features soft-close mechanism and robust construction.</p>
+                        
+                        <div class="product-options">
+                            <p class="options-title">Available Heights:</p>
+                            <div class="size-options">
+                                <button class="size-option">84mm</button>
+                                <button class="size-option">116mm</button>
+                                <button class="size-option active">167mm</button>
+                            </div>
+                            
+                            <p class="options-title">Available Colors:</p>
+                            <div class="color-options">
+                                <button class="color-option color-dark-grey active" aria-label="Dark Grey"></button>
+                                <button class="color-option color-graphite" aria-label="Graphite"></button>
+                                <button class="color-option color-silver" aria-label="Silver"></button>
+                            </div>
+                        </div>
+                        
+                        <table class="specs-table">
+                            <caption class="sr-only">Product Specifications</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Load Capacity</th>
+                                    <td>50kg</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Material</th>
+                                    <td>Steel with powder coating</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Extension</th>
+                                    <td>Full extension</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <a href="/product-details/slim-tandem-400" class="btn btn-primary">View Details</a>
+                    </div>
+                </article>
+
+                <!-- Product 4 -->
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img src="/images/products/slim-tandem-450.jpg" alt="Slim Tandem Box 450mm" class="product-image" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Slim Tandem Box 450mm</h3>
+                        <p class="product-description">Large 450mm slim tandem box for heavy-duty applications. Perfect for deep drawers requiring high load capacity and durability.</p>
+                        
+                        <div class="product-options">
+                            <p class="options-title">Available Heights:</p>
+                            <div class="size-options">
+                                <button class="size-option active">84mm</button>
+                                <button class="size-option">116mm</button>
+                                <button class="size-option">167mm</button>
+                                <button class="size-option">199mm</button>
+                            </div>
+                            
+                            <p class="options-title">Available Colors:</p>
+                            <div class="color-options">
+                                <button class="color-option color-dark-grey active" aria-label="Dark Grey"></button>
+                                <button class="color-option color-graphite" aria-label="Graphite"></button>
+                            </div>
+                        </div>
+                        
+                        <table class="specs-table">
+                            <caption class="sr-only">Product Specifications</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Load Capacity</th>
+                                    <td>50kg</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Material</th>
+                                    <td>Steel with powder coating</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Extension</th>
+                                    <td>Full extension</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <a href="/product-details/slim-tandem-450" class="btn btn-primary">View Details</a>
+                    </div>
+                </article>
+
+                <!-- Product 5 -->
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img src="/images/products/slim-tandem-softclose.jpg" alt="Slim Tandem Box 500mm" class="product-image" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Slim Tandem Box 500mm</h3>
+                        <p class="product-description">Premium slim tandem box featuring advanced soft-close technology for silent and gentle operation. Available in all standard sizes.</p>
+                        
+                        <div class="product-options">
+                            <p class="options-title">Available Heights:</p>
+                            <div class="size-options">
+                                <button class="size-option">84mm</button>
+                                <button class="size-option">116mm</button>
+                                <button class="size-option active">167mm</button>
+                                <button class="size-option">199mm</button>
+                            </div>
+                            
+                            <p class="options-title">Available Colors:</p>
+                            <div class="color-options">
+                                <button class="color-option color-dark-grey active" aria-label="Dark Grey"></button>
+                                <button class="color-option color-graphite" aria-label="Graphite"></button>
+                                <button class="color-option color-silver" aria-label="Silver"></button>
+                            </div>
+                        </div>
+                        
+                        <table class="specs-table">
+                            <caption class="sr-only">Product Specifications</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Load Capacity</th>
+                                    <td>50kg</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Material</th>
+                                    <td>Steel with powder coating</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Extension</th>
+                                    <td>Full extension with soft-close</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <a href="/product-details/slim-tandem-softclose" class="btn btn-primary">View Details</a>
+                    </div>
+                </article>
+
+                <!-- Product 6 -->
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img src="/images/products/slim-tandem-heavy-duty.jpg" alt="Slim Tandem Box 550mm" class="product-image" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Slim Tandem Box 550mm</h3>
+                        <p class="product-description">Industrial-grade slim tandem box designed for high-load applications. Reinforced construction with enhanced durability.</p>
+                        
+                        <div class="product-options">
+                            <p class="options-title">Available Heights:</p>
+                            <div class="size-options">
+                                <button class="size-option">84mm</button>
+                                <button class="size-option">116mm</button>
+                                <button class="size-option">167mm</button>
+                                <button class="size-option active">199mm</button>
+                            </div>
+                            
+                            <p class="options-title">Available Colors:</p>
+                            <div class="color-options">
+                                <button class="color-option color-dark-grey active" aria-label="Dark Grey"></button>
+                                <button class="color-option color-graphite" aria-label="Graphite"></button>
+                            </div>
+                        </div>
+                        
+                        <table class="specs-table">
+                            <caption class="sr-only">Product Specifications</caption>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Load Capacity</th>
+                                    <td>60kg</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Material</th>
+                                    <td>Reinforced steel with coating</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Extension</th>
+                                    <td>Full extension</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <a href="/product-details/slim-tandem-heavy-duty" class="btn btn-primary">View Details</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section features-section" aria-labelledby="featuresTitle">
+        <div class="container">
+            <h2 id="featuresTitle" class="section-title">Why Choose Our Slim Tandem Boxes</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-weight-hanging" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="feature-title">High Load Capacity</h3>
+                    <p class="feature-description">Engineered to support significant weight while maintaining smooth operation, with capacities up to 60kg.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sliders-h" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="feature-title">Smooth Operation</h3>
+                    <p class="feature-description">Precision-engineered runners ensure effortless opening and closing, even with heavy loads.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="feature-title">Multiple Finishes</h3>
+                    <p class="feature-description">Available in various grey tones to match any interior design scheme and cabinet finish.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="feature-title">Durable Construction</h3>
+                    <p class="feature-description">Made from high-quality steel with protective coating to resist wear and corrosion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Mex<span>is</span></div>
+                    <p>Mexis offers premium home furniture design solutions, including kitchen tandem systems, wardrobe hardware, and modern aluminum profiles.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" target="_blank" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" target="_blank" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="#" class="social-link" target="_blank" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="specialservice.html">Customization</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="/products/tandem-systems">Tandem Systems</a></li>
+                        <li><a href="/products/aluminum-profiles">Aluminum Profiles</a></li>
+                        <li><a href="/products/locking-solutions">Locking Solutions</a></li>
+                        <li><a href="/products/sliding-systems">Sliding Systems</a></li>
+                        <li><a href="/products/wardrobe-hardware">Wardrobe Hardware</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="/support/faq">FAQ</a></li>
+                        <li><a href="/products/catalog">Product Catalog</a></li>
+                        <li><a href="/support/installation-guides">Installation Guides</a></li>
+                        <li><a href="/support/warranty">Warranty Information</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Mexis. All Rights Reserved. Designed with <i class="fas fa-heart" style="color: var(--error);" aria-hidden="true"></i> in India</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+            mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
+            navLinks.classList.toggle('active');
+        });
+
+        // Add "scrolled" class to header on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Update copyright year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Size option selection
+        document.querySelectorAll('.size-option').forEach(option => {
+            option.addEventListener('click', function() {
+                this.parentElement.querySelector('.active').classList.remove('active');
+                this.classList.add('active');
+            });
+        });
+
+        // Color option selection
+        document.querySelectorAll('.color-option').forEach(option => {
+            option.addEventListener('click', function() {
+                this.closest('.color-options').querySelector('.active').classList.remove('active');
+                this.classList.add('active');
+            });
+        });
+
+        // Lazy loading for images
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        }
+    </script>
+</body>
+</html>
