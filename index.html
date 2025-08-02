@@ -1245,6 +1245,8 @@
                 
                 <div class="contact-form">
                     <form id="inquiryForm" method="POST" action="https://formspree.io/f/xgvvlzkn">
+                        <input type="hidden" name="_next" value="https://yourusername.github.io/repository-name/success.html">
+                        
                         <div class="form-group">
                             <label for="inquiry_name" class="form-label">Full Name*</label>
                             <input type="text" id="inquiry_name" name="name" class="form-control" required>
@@ -1268,7 +1270,7 @@
                         <div class="form-group">
                             <label for="inquiry_product" class="form-label">Product of Interest*</label>
                             <select id="inquiry_product" name="product" class="form-control" required>
-                                <option value="">-- Select a Product --</option>
+                                <option value="" disabled selected>-- Select a Product --</option>
                                 <option value="Tandem Systems">Tandem Systems</option>
                                 <option value="Locking Solutions">Locking Solutions</option>
                                 <option value="Aluminium Profiles">Aluminium Profiles</option>
@@ -1502,7 +1504,7 @@
             }
         });
 
-        // AJAX form submission
+        // Form submission handler
         document.getElementById('inquiryForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -1518,27 +1520,38 @@
             
             fetch(form.action, {
                 method: 'POST',
-                body: formData
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
             })
-            .then(response => response.json())
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
             .then(data => {
                 responseDiv.style.display = 'block';
-                if (data.success) {
-                    responseDiv.innerHTML = `<div class="alert alert-success">${data.message}</div>`;
-                    form.reset();
-                } else {
-                    responseDiv.innerHTML = `<div class="alert alert-danger">${data.message}</div>`;
-                }
+                responseDiv.innerHTML = `
+                    <div class="alert alert-success">
+                        Thank you! Your inquiry has been submitted successfully. We'll contact you soon.
+                    </div>
+                `;
+                form.reset();
             })
             .catch(error => {
                 responseDiv.style.display = 'block';
-                responseDiv.innerHTML = `<div class="alert alert-danger">There was an error submitting your form. Please try again.</div>`;
+                responseDiv.innerHTML = `
+                    <div class="alert alert-danger">
+                        There was an error submitting your form. Please try again or contact us directly.
+                    </div>
+                `;
             })
             .finally(() => {
                 submitBtn.innerHTML = originalBtnText;
                 submitBtn.disabled = false;
-                
-                // Scroll to response
                 responseDiv.scrollIntoView({ behavior: 'smooth' });
             });
         });
@@ -1639,8 +1652,6 @@
                 return "Sure! What do you need help with? You can ask about our products, installation, or any other queries you may have.";
             } else if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
                 return "Hello! How can I assist you today?";
-            } else if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
-                return "Hello! How can I assist you today?";
             } else {
                 return "I'm sorry, I didn't understand your question. Could you please rephrase it? For immediate assistance, you can mail us on ayanenterprise0821@gmail.com.";
             }
@@ -1658,4 +1669,3 @@
     </script>
 </body>
 </html>
-
